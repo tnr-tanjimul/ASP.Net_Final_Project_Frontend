@@ -37,16 +37,16 @@ function TemplateCreate() {
 
 
                                             <div className="form-group mb-3">
-                                                <label for="product-meta-keywords">Name</label>
+                                                <label htmlFor="product-meta-keywords">Name</label>
                                                 <input type="text" className="form-control" name="Name" id="Name" placeholder="" />
-                                                <span className="field-validation-valid text-danger" data-valmsg-for="Name" data-valmsg-replace="true"></span>
+                                                <span className="field-validation-valid text-danger" data-valmsg-htmlfor="Name" data-valmsg-replace="true"></span>
                                             </div>
 
 
                                             <div className="form-group mb-3">
-                                                <label for="messageInput">Message</label>
+                                                <label htmlFor="messageInput">Message</label>
                                                 <textarea name="message" className="form-control" rows="5" id="messageInput" data-counter="#smsCounter" placeholder="Please enter description"></textarea>
-                                                <span className="field-validation-valid text-danger" data-valmsg-for="Message" data-valmsg-replace="true"></span>
+                                                <span className="field-validation-valid text-danger" data-valmsg-htmlfor="Message" data-valmsg-replace="true"></span>
                                             </div>
 
 
