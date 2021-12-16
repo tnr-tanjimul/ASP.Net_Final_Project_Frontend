@@ -10,6 +10,11 @@ import AuthRegistration from "./Components/Auth/AuthRegistration";
 import GroupCreate from "./Components/Pages/GroupCreate";
 import GroupView from "./Components/Pages/GroupView";
 import ContactView from "./Components/Pages/ContactView";
+import ContactCreate from "./Components/Pages/ContactCreate";
+import TemplateView from "./Components/Pages/TemplateView";
+import TemplateCreate from "./Components/Pages/TemplateCreate";
+import Sender from "./Components/Pages/Sender";
+import BulkSender from "./Components/Pages/BulkSender";
 function AppMain() {
     return (
         <Router>
@@ -21,22 +26,40 @@ function AppMain() {
 
                     <Switch>
                         <Route exact path="/">
-                                <Dashboard></Dashboard>
+                            <Dashboard></Dashboard>
                         </Route>
 
                         <Route exact path="/group/">
-                                <GroupView></GroupView>
+                            <GroupView></GroupView>
                         </Route>
                         <Route exact path="/group/create">
-                                <GroupCreate></GroupCreate>
+                            <GroupCreate></GroupCreate>
                         </Route>
 
                         <Route exact path="/contact">
-                               <ContactView></ContactView>
+                            <ContactView></ContactView>
+                        </Route>
+
+                        <Route exact path="/contact/create">
+                            <ContactCreate></ContactCreate>
                         </Route>
                         
 
-                        
+                        <Route exact path="/template">
+                            <TemplateView></TemplateView>
+                        </Route>
+
+                        <Route exact path="/template/create">
+                            <TemplateCreate></TemplateCreate>
+                        </Route>
+
+                        <Route exact path="/sender">
+                            <Sender></Sender>
+                        </Route>
+
+                        <Route exact path="/bulksender">
+                            <BulkSender></BulkSender>
+                        </Route>
 
                         
                       

@@ -4,7 +4,7 @@ import LeftSideBar from "../LeftSidebar";
 import RightSidebar from "../RightSidebar";
 import TopBar from "../TopBar";
 
-function GroupCreate() {
+function TemplateCreate() {
     return (
         <>
             <div id="wrapper">
@@ -18,11 +18,11 @@ function GroupCreate() {
 
                             {/* start page title */}
 
-                            <BreadcrumbNav page="Group" title="Create"></BreadcrumbNav>
+                            <BreadcrumbNav page="Template" title="Create"></BreadcrumbNav>
 
-                            <form action="/Group/Create" method="post">
+                            <form action="/Template/Create" method="post">
 
-                                <input name="__RequestVerificationToken" type="hidden" defaultValue="CEsnLF2_0eKEfc2ePLt_VcNg25iNayU1q5_zUjRM42saIMr9m9V7neM82XJgcCtpaDltz6tOFWPKKGHB24TrdWtIZvJmF7jmnCWQWpNxdxcwvSdlIk3fC6j6c-U0FAWw0" />
+                                <input name="__RequestVerificationToken" type="hidden" defaultValue="HrOs0oHo1hWU4oBZfvLTRJTATqkFMvXwxQ1Jdf2U4tTp3Rlayc2Ni3wjkUm6MulAE-zAoXwpoIs7LaQH3hai9_CJ7jHA7Q22QgKhwUpXdI39_2B5Nc4zbulMFOYaNH3z0" />
                                 <div className="row">
 
 
@@ -36,20 +36,22 @@ function GroupCreate() {
 
 
 
-
-                                            <input type="hidden" name="UserId" defaultValue="" />
-
+                                            <div className="form-group mb-3">
+                                                <label for="product-meta-keywords">Name</label>
+                                                <input type="text" className="form-control" name="Name" id="Name" placeholder="" />
+                                                <span className="field-validation-valid text-danger" data-valmsg-for="Name" data-valmsg-replace="true"></span>
+                                            </div>
 
 
                                             <div className="form-group mb-3">
-                                                <label htmlFor="product-meta-keywords">Name</label>
-                                                <input type="text" className="form-control" name="Name" id="Name" placeholder="" />
-                                                <span className="field-validation-valid text-danger" data-valmsg-replace="true"></span>
+                                                <label for="messageInput">Message</label>
+                                                <textarea name="message" className="form-control" rows="5" id="messageInput" data-counter="#smsCounter" placeholder="Please enter description"></textarea>
+                                                <span className="field-validation-valid text-danger" data-valmsg-for="Message" data-valmsg-replace="true"></span>
                                             </div>
 
 
                                             <div className="text-center mb-3">
-                                                <a href="/Group/Index" type="button" className="btn w-sm btn-light waves-effect">Cancel</a>
+                                                <a href="/Template/Index" type="button" className="btn w-sm btn-light waves-effect">Cancel</a>
                                                 <button type="submit" className="btn w-sm btn-success waves-effect waves-light">Save</button>
 
                                             </div>
@@ -84,4 +86,4 @@ function GroupCreate() {
     );
 }
 
-export default GroupCreate;
+export default TemplateCreate;

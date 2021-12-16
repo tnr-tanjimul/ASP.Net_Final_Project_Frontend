@@ -2,6 +2,7 @@ import Footer from "../Footer";
 import LeftSideBar from "../LeftSidebar";
 import RightSidebar from "../RightSidebar";
 import TopBar from "../TopBar";
+import BreadcrumbNav from "../BreadcrumbNav";
 
 function GroupView() {
     return (
@@ -17,29 +18,16 @@ function GroupView() {
 
                             {/* start page title */}
 
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="page-title-box">
-                                        <div class="page-title-right">
-                                            <ol class="breadcrumb m-0">
-                                                <li class="breadcrumb-item"><a href="javascript: void(0);">SMS Gateway</a></li>
-                                                <li class="breadcrumb-item"><a href="javascript: void(0);">Group</a></li>
+                            <BreadcrumbNav page="Group" title="View"></BreadcrumbNav>
 
-                                            </ol>
-                                        </div>
-                                        <h4 class="page-title">View </h4>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="card">
-                                        <div class="card-body">
+                            <div className="row">
+                                <div className="col-12">
+                                    <div className="card">
+                                        <div className="card-body">
 
 
-                                            <div class="table-responsive">
-                                                <table class="table table-centered table-striped dt-responsive nowrap w-100" id="products-datatable">
+                                            <div className="table-responsive">
+                                                <table className="table table-centered table-striped dt-responsive nowrap w-100" id="products-datatable">
                                                     <thead>
                                                         <tr>
                                                             <th>ID</th>
@@ -50,7 +38,7 @@ function GroupView() {
                                                     <tbody>
                                                         <tr>
 
-                                                            <td class="table-user">
+                                                            <td className="table-user">
 
                                                                 1
                                                             </td>
@@ -60,13 +48,13 @@ function GroupView() {
 
 
                                                             <td>
-                                                                <a href="/Group/Edit/1" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
-                                                                <a href="/Group/Delete/1" class="action-icon"> <i class="mdi mdi-delete"></i></a>
+                                                                <a href="/Group/Edit/1" className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></a>
+                                                                <a href="/Group/Delete/1" className="action-icon"> <i className="mdi mdi-delete"></i></a>
                                                             </td>
                                                         </tr>
                                                         <tr>
 
-                                                            <td class="table-user">
+                                                            <td className="table-user">
 
                                                                 3
                                                             </td>
@@ -76,13 +64,13 @@ function GroupView() {
 
 
                                                             <td>
-                                                                <a href="/Group/Edit/3" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
-                                                                <a href="/Group/Delete/3" class="action-icon"> <i class="mdi mdi-delete"></i></a>
+                                                                <a href="/Group/Edit/3" className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></a>
+                                                                <a href="/Group/Delete/3" className="action-icon"> <i className="mdi mdi-delete"></i></a>
                                                             </td>
                                                         </tr>
                                                         <tr>
 
-                                                            <td class="table-user">
+                                                            <td className="table-user">
 
                                                                 4
                                                             </td>
@@ -92,13 +80,13 @@ function GroupView() {
 
 
                                                             <td>
-                                                                <a href="/Group/Edit/4" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
-                                                                <a href="/Group/Delete/4" class="action-icon"> <i class="mdi mdi-delete"></i></a>
+                                                                <a href="/Group/Edit/4" className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></a>
+                                                                <a href="/Group/Delete/4" className="action-icon"> <i className="mdi mdi-delete"></i></a>
                                                             </td>
                                                         </tr>
                                                         <tr>
 
-                                                            <td class="table-user">
+                                                            <td className="table-user">
 
                                                                 7
                                                             </td>
@@ -108,13 +96,13 @@ function GroupView() {
 
 
                                                             <td>
-                                                                <a href="/Group/Edit/7" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
-                                                                <a href="/Group/Delete/7" class="action-icon"> <i class="mdi mdi-delete"></i></a>
+                                                                <a href="/Group/Edit/7" className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></a>
+                                                                <a href="/Group/Delete/7" className="action-icon"> <i className="mdi mdi-delete"></i></a>
                                                             </td>
                                                         </tr>
                                                         <tr>
 
-                                                            <td class="table-user">
+                                                            <td className="table-user">
 
                                                                 17
                                                             </td>
@@ -124,13 +112,13 @@ function GroupView() {
 
 
                                                             <td>
-                                                                <a href="/Group/Edit/17" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
-                                                                <a href="/Group/Delete/17" class="action-icon"> <i class="mdi mdi-delete"></i></a>
+                                                                <a href="/Group/Edit/17" className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></a>
+                                                                <a href="/Group/Delete/17" className="action-icon"> <i className="mdi mdi-delete"></i></a>
                                                             </td>
                                                         </tr>
                                                         <tr>
 
-                                                            <td class="table-user">
+                                                            <td className="table-user">
 
                                                                 25
                                                             </td>
@@ -140,13 +128,13 @@ function GroupView() {
 
 
                                                             <td>
-                                                                <a href="/Group/Edit/25" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
-                                                                <a href="/Group/Delete/25" class="action-icon"> <i class="mdi mdi-delete"></i></a>
+                                                                <a href="/Group/Edit/25" className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></a>
+                                                                <a href="/Group/Delete/25" className="action-icon"> <i className="mdi mdi-delete"></i></a>
                                                             </td>
                                                         </tr>
                                                         <tr>
 
-                                                            <td class="table-user">
+                                                            <td className="table-user">
 
                                                                 27
                                                             </td>
@@ -156,8 +144,8 @@ function GroupView() {
 
 
                                                             <td>
-                                                                <a href="/Group/Edit/27" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
-                                                                <a href="/Group/Delete/27" class="action-icon"> <i class="mdi mdi-delete"></i></a>
+                                                                <a href="/Group/Edit/27" className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></a>
+                                                                <a href="/Group/Delete/27" className="action-icon"> <i className="mdi mdi-delete"></i></a>
                                                             </td>
                                                         </tr>
 

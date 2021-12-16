@@ -70,7 +70,7 @@ function TopBar(){
 														
 														
 			                                            {/* item*/}
-			                                            <a href="javascript:void(0);" className="dropdown-item notify-item">
+			                                            <a href="#" className="dropdown-item notify-item">
 			                                                <div className="notify-icon">
 			                                                    <img src="assets/images/users/user-4.jpg" className="img-fluid rounded-circle" alt=""/>
 															</div>
@@ -81,7 +81,7 @@ function TopBar(){
 														</a>
 														
 			                                            {/* item*/}
-			                                            <a href="javascript:void(0);" className="dropdown-item notify-item">
+			                                            <a href="#" className="dropdown-item notify-item">
 			                                                <div className="notify-icon bg-warning">
 			                                                    <i className="mdi mdi-account-plus"></i>
 															</div>
@@ -93,7 +93,7 @@ function TopBar(){
 														
 														
 			                                            {/* item*/}
-			                                            <a href="javascript:void(0);" className="dropdown-item notify-item">
+			                                            <a href="#" className="dropdown-item notify-item">
 			                                                <div className="notify-icon bg-secondary">
 			                                                    <i className="mdi mdi-heart"></i>
 															</div>
@@ -117,7 +117,7 @@ function TopBar(){
 								</div>
 								
 			                    {/* All*/}
-			                    <a href="javascript:void(0);" className="dropdown-item text-center text-primary notify-item notify-all">
+			                    <a href="#" className="dropdown-item text-center text-primary notify-item notify-all">
 			                        View all
 			                        <i className="fe-arrow-right"></i>
 								</a>
@@ -140,13 +140,13 @@ function TopBar(){
 								</div>
 								
 			                    {/* item*/}
-			                    <a href="javascript:void(0);" className="dropdown-item notify-item">
+			                    <a href="#" className="dropdown-item notify-item">
 			                        <i className="fe-user"></i>
 			                        <span>My Account</span>
 								</a>
 								
 			                    {/* item*/}
-			                    <a href="javascript:void(0);" className="dropdown-item notify-item">
+			                    <a href="#" className="dropdown-item notify-item">
 			                        <i className="fe-settings"></i>
 			                        <span>Settings</span>
 								</a>
@@ -169,7 +169,7 @@ function TopBar(){
 						</li>
 						
 			            <li className="dropdown notification-list">
-			                <a href="javascript:void(0);" className="nav-link right-bar-toggle waves-effect waves-light">
+			                <a href="#" className="nav-link right-bar-toggle waves-effect waves-light">
 			                    <i className="fe-settings noti-icon"></i>
 							</a>
 						</li>
@@ -225,25 +225,25 @@ function TopBar(){
 							</a>
 			                <div className="dropdown-menu">
 			                    {/* item*/}
-			                    <a href="javascript:void(0);" className="dropdown-item">
+			                    <a href="#" className="dropdown-item">
 			                        <i className="fe-briefcase mr-1"></i>
 			                        <span>New Projects</span>
 								</a>
 								
 			                    {/* item*/}
-			                    <a href="javascript:void(0);" className="dropdown-item">
+			                    <a href="#" className="dropdown-item">
 			                        <i className="fe-user mr-1"></i>
 			                        <span>Create Users</span>
 								</a>
 								
 			                    {/* item*/}
-			                    <a href="javascript:void(0);" className="dropdown-item">
+			                    <a href="#" className="dropdown-item">
 			                        <i className="fe-bar-chart-line- mr-1"></i>
 			                        <span>Revenue Report</span>
 								</a>
 								
 			                    {/* item*/}
-			                    <a href="javascript:void(0);" className="dropdown-item">
+			                    <a href="#" className="dropdown-item">
 			                        <i className="fe-settings mr-1"></i>
 			                        <span>Settings</span>
 								</a>
@@ -251,7 +251,7 @@ function TopBar(){
 			                    <div className="dropdown-divider"></div>
 								
 			                    {/* item*/}
-			                    <a href="javascript:void(0);" className="dropdown-item">
+			                    <a href="#" className="dropdown-item">
 			                        <i className="fe-headphones mr-1"></i>
 			                        <span>Help &amp; Support</span>
 								</a>
@@ -273,25 +273,25 @@ function TopBar(){
 			                                    <h5 className="text-dark mt-0">UI Components</h5>
 			                                    <ul className="list-unstyled megamenu-list">
 			                                        <li>
-			                                            <a href="javascript:void(0);">Widgets</a>
+			                                            <a href="#">Widgets</a>
 													</li>
 			                                        <li>
-			                                            <a href="javascript:void(0);">Nestable List</a>
+			                                            <a href="#">Nestable List</a>
 													</li>
 			                                        <li>
-			                                            <a href="javascript:void(0);">Range Sliders</a>
+			                                            <a href="#">Range Sliders</a>
 													</li>
 			                                        <li>
-			                                            <a href="javascript:void(0);">Masonry Items</a>
+			                                            <a href="#">Masonry Items</a>
 													</li>
 			                                        <li>
-			                                            <a href="javascript:void(0);">Sweet Alerts</a>
+			                                            <a href="#">Sweet Alerts</a>
 													</li>
 			                                        <li>
-			                                            <a href="javascript:void(0);">Treeview Page</a>
+			                                            <a href="#">Treeview Page</a>
 													</li>
 			                                        <li>
-			                                            <a href="javascript:void(0);">Tour Page</a>
+			                                            <a href="#">Tour Page</a>
 													</li>
 												</ul>
 											</div>
@@ -300,25 +300,25 @@ function TopBar(){
 			                                    <h5 className="text-dark mt-0">Applications</h5>
 			                                    <ul className="list-unstyled megamenu-list">
 			                                        <li>
-			                                            <a href="javascript:void(0);">eCommerce Pages</a>
+			                                            <a href="#">eCommerce Pages</a>
 													</li>
 			                                        <li>
-			                                            <a href="javascript:void(0);">CRM Pages</a>
+			                                            <a href="#">CRM Pages</a>
 													</li>
 			                                        <li>
-			                                            <a href="javascript:void(0);">Email</a>
+			                                            <a href="#">Email</a>
 													</li>
 			                                        <li>
-			                                            <a href="javascript:void(0);">Calendar</a>
+			                                            <a href="#">Calendar</a>
 													</li>
 			                                        <li>
-			                                            <a href="javascript:void(0);">Team Contacts</a>
+			                                            <a href="#">Team Contacts</a>
 													</li>
 			                                        <li>
-			                                            <a href="javascript:void(0);">Task Board</a>
+			                                            <a href="#">Task Board</a>
 													</li>
 			                                        <li>
-			                                            <a href="javascript:void(0);">Email Templates</a>
+			                                            <a href="#">Email Templates</a>
 													</li>
 												</ul>
 											</div>
@@ -327,25 +327,25 @@ function TopBar(){
 			                                    <h5 className="text-dark mt-0">Extra Pages</h5>
 			                                    <ul className="list-unstyled megamenu-list">
 			                                        <li>
-			                                            <a href="javascript:void(0);">Left Sidebar with User</a>
+			                                            <a href="#">Left Sidebar with User</a>
 													</li>
 			                                        <li>
-			                                            <a href="javascript:void(0);">Menu Collapsed</a>
+			                                            <a href="#">Menu Collapsed</a>
 													</li>
 			                                        <li>
-			                                            <a href="javascript:void(0);">Small Left Sidebar</a>
+			                                            <a href="#">Small Left Sidebar</a>
 													</li>
 			                                        <li>
-			                                            <a href="javascript:void(0);">New Header Style</a>
+			                                            <a href="#">New Header Style</a>
 													</li>
 			                                        <li>
-			                                            <a href="javascript:void(0);">Search Result</a>
+			                                            <a href="#">Search Result</a>
 													</li>
 			                                        <li>
-			                                            <a href="javascript:void(0);">Gallery Pages</a>
+			                                            <a href="#">Gallery Pages</a>
 													</li>
 			                                        <li>
-			                                            <a href="javascript:void(0);">Maintenance &amp; Coming Soon</a>
+			                                            <a href="#">Maintenance &amp; Coming Soon</a>
 													</li>
 												</ul>
 											</div>

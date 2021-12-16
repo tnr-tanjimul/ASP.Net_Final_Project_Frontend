@@ -37,10 +37,10 @@ class Contact extends Component {
                                                     </div>
                                                 </div>
                                             </div>
-                                            <a href="javascript: void(0);" className="btn btn-blue btn-sm ml-2">
+                                            <a href="#" className="btn btn-blue btn-sm ml-2">
                                                 <i className="mdi mdi-autorenew"></i>
                                             </a>
-                                            <a href="javascript: void(0);" className="btn btn-blue btn-sm ml-1">
+                                            <a href="#" className="btn btn-blue btn-sm ml-1">
                                                 <i className="mdi mdi-filter-variant"></i>
                                             </a>
                                         </form>

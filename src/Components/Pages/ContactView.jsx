@@ -2,7 +2,7 @@ import Footer from "../Footer";
 import LeftSideBar from "../LeftSidebar";
 import RightSidebar from "../RightSidebar";
 import TopBar from "../TopBar";
-
+import BreadcrumbNav from "../BreadcrumbNav";
 function ContactView() {
     return (
         <>
@@ -17,29 +17,16 @@ function ContactView() {
 
                             {/* start page title */}
 
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="page-title-box">
-                                        <div class="page-title-right">
-                                            <ol class="breadcrumb m-0">
-                                                <li class="breadcrumb-item"><a href="javascript: void(0);">SMS Gateway</a></li>
-                                                <li class="breadcrumb-item"><a href="javascript: void(0);">Group</a></li>
+                            <BreadcrumbNav page="Contact" title="View"></BreadcrumbNav>
 
-                                            </ol>
-                                        </div>
-                                        <h4 class="page-title">View </h4>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="card">
-                                        <div class="card-body">
+                            <div className="row">
+                                <div className="col-12">
+                                    <div className="card">
+                                        <div className="card-body">
 
 
-                                            <div class="table-responsive">
-                                                <table class="table table-centered table-striped dt-responsive nowrap w-100" id="products-datatable">
+                                            <div className="table-responsive">
+                                                <table className="table table-centered table-striped dt-responsive nowrap w-100" id="products-datatable">
                                                     <thead>
                                                         <tr>
 
@@ -55,7 +42,7 @@ function ContactView() {
                                                     <tbody>
                                                         <tr>
 
-                                                            <td class="table-user">
+                                                            <td className="table-user">
 
                                                                 22
                                                             </td>
@@ -70,8 +57,8 @@ function ContactView() {
 
 
                                                             <td>
-                                                                <a href="/Contact/Edit/22" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
-                                                                <a href="/Contact/Delete/22" class="action-icon"> <i class="mdi mdi-delete"></i></a>
+                                                                <a href="/Contact/Edit/22" className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></a>
+                                                                <a href="/Contact/Delete/22" className="action-icon"> <i className="mdi mdi-delete"></i></a>
                                                             </td>
                                                         </tr>
 

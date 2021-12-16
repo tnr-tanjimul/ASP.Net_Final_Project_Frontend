@@ -14,28 +14,28 @@ function TabPanes() {
                     <h6 className="font-weight-medium font-14 mt-4 mb-2 pb-1">Color Scheme</h6>
                     <div className="custom-control custom-switch mb-1">
                         <input type="radio" className="custom-control-input" name="color-scheme-mode"
-                            value="light" id="light-mode-check" checked="" />
-                        <label className="custom-control-label" for="light-mode-check">Light
+                            defaultValue="light" id="light-mode-check" defaultChecked="" />
+                        <label className="custom-control-label" htmlFor="light-mode-check">Light
                             Mode</label>
                     </div>
 
                     <div className="custom-control custom-switch mb-1">
                         <input type="radio" className="custom-control-input" name="color-scheme-mode"
-                            value="dark" id="dark-mode-check" />
-                        <label className="custom-control-label" for="dark-mode-check">Dark Mode</label>
+                            defaultValue="dark" id="dark-mode-check" />
+                        <label className="custom-control-label" htmlFor="dark-mode-check">Dark Mode</label>
                     </div>
 
                     {/* Width */}
                     <h6 className="font-weight-medium font-14 mt-4 mb-2 pb-1">Width</h6>
                     <div className="custom-control custom-switch mb-1">
-                        <input type="radio" className="custom-control-input" name="width" value="fluid"
-                            id="fluid-check" checked="" />
-                        <label className="custom-control-label" for="fluid-check">Fluid</label>
+                        <input type="radio" className="custom-control-input" name="width" defaultValue="fluid"
+                            id="fluid-check" defaultChecked="" />
+                        <label className="custom-control-label" htmlFor="fluid-check">Fluid</label>
                     </div>
                     <div className="custom-control custom-switch mb-1">
-                        <input type="radio" className="custom-control-input" name="width" value="boxed"
+                        <input type="radio" className="custom-control-input" name="width" defaultValue="boxed"
                             id="boxed-check" />
-                        <label className="custom-control-label" for="boxed-check">Boxed</label>
+                        <label className="custom-control-label" htmlFor="boxed-check">Boxed</label>
                     </div>
 
                     {/* Menu positions */}
@@ -44,15 +44,15 @@ function TabPanes() {
 
                     <div className="custom-control custom-switch mb-1">
                         <input type="radio" className="custom-control-input" name="menus-position"
-                            value="fixed" id="fixed-check" checked="" />
-                        <label className="custom-control-label" for="fixed-check">Fixed</label>
+                            defaultValue="fixed" id="fixed-check" defaultChecked="" />
+                        <label className="custom-control-label" htmlFor="fixed-check">Fixed</label>
                     </div>
 
                     <div className="custom-control custom-switch mb-1">
                         <input type="radio" className="custom-control-input" name="menus-position"
-                            value="scrollable" id="scrollable-check" />
+                            defaultValue="scrollable" id="scrollable-check" />
                         <label className="custom-control-label"
-                            for="scrollable-check">Scrollable</label>
+                            htmlFor="scrollable-check">Scrollable</label>
                     </div>
 
                     {/* Left Sidebar*/}
@@ -60,26 +60,26 @@ function TabPanes() {
 
                     <div className="custom-control custom-switch mb-1">
                         <input type="radio" className="custom-control-input" name="leftsidebar-color"
-                            value="light" id="light-check" checked="" />
-                        <label className="custom-control-label" for="light-check">Light</label>
+                            defaultValue="light" id="light-check" defaultChecked="" />
+                        <label className="custom-control-label" htmlFor="light-check">Light</label>
                     </div>
 
                     <div className="custom-control custom-switch mb-1">
                         <input type="radio" className="custom-control-input" name="leftsidebar-color"
-                            value="dark" id="dark-check" />
-                        <label className="custom-control-label" for="dark-check">Dark</label>
+                            defaultValue="dark" id="dark-check" />
+                        <label className="custom-control-label" htmlFor="dark-check">Dark</label>
                     </div>
 
                     <div className="custom-control custom-switch mb-1">
                         <input type="radio" className="custom-control-input" name="leftsidebar-color"
-                            value="brand" id="brand-check" />
-                        <label className="custom-control-label" for="brand-check">Brand</label>
+                            defaultValue="brand" id="brand-check" />
+                        <label className="custom-control-label" htmlFor="brand-check">Brand</label>
                     </div>
 
                     <div className="custom-control custom-switch mb-3">
                         <input type="radio" className="custom-control-input" name="leftsidebar-color"
-                            value="gradient" id="gradient-check" />
-                        <label className="custom-control-label" for="gradient-check">Gradient</label>
+                            defaultValue="gradient" id="gradient-check" />
+                        <label className="custom-control-label" htmlFor="gradient-check">Gradient</label>
                     </div>
 
                     {/* size */}
@@ -87,21 +87,21 @@ function TabPanes() {
 
                     <div className="custom-control custom-switch mb-1">
                         <input type="radio" className="custom-control-input" name="leftsidebar-size"
-                            value="default" id="default-size-check" checked="" />
-                        <label className="custom-control-label" for="default-size-check">Default</label>
+                            defaultValue="default" id="default-size-check" defaultChecked="" />
+                        <label className="custom-control-label" htmlFor="default-size-check">Default</label>
                     </div>
 
                     <div className="custom-control custom-switch mb-1">
                         <input type="radio" className="custom-control-input" name="leftsidebar-size"
-                            value="condensed" id="condensed-check" />
-                        <label className="custom-control-label" for="condensed-check">Condensed
+                            defaultValue="condensed" id="condensed-check" />
+                        <label className="custom-control-label" htmlFor="condensed-check">Condensed
                             <small>(Extra Small size)</small></label>
                     </div>
 
                     <div className="custom-control custom-switch mb-1">
                         <input type="radio" className="custom-control-input" name="leftsidebar-size"
-                            value="compact" id="compact-check" />
-                        <label className="custom-control-label" for="compact-check">Compact
+                            defaultValue="compact" id="compact-check" />
+                        <label className="custom-control-label" htmlFor="compact-check">Compact
                             <small>(Small size)</small></label>
                     </div>
 
@@ -110,8 +110,8 @@ function TabPanes() {
 
                     <div className="custom-control custom-switch mb-1">
                         <input type="checkbox" className="custom-control-input" name="leftsidebar-user"
-                            value="fixed" id="sidebaruser-check" />
-                        <label className="custom-control-label" for="sidebaruser-check">Enable</label>
+                            defaultValue="fixed" id="sidebaruser-check" />
+                        <label className="custom-control-label" htmlFor="sidebaruser-check">Enable</label>
                     </div>
 
 
@@ -120,14 +120,14 @@ function TabPanes() {
 
                     <div className="custom-control custom-switch mb-1">
                         <input type="radio" className="custom-control-input" name="topbar-color"
-                            value="dark" id="darktopbar-check" checked="" />
-                        <label className="custom-control-label" for="darktopbar-check">Dark</label>
+                            defaultValue="dark" id="darktopbar-check" defaultChecked="" />
+                        <label className="custom-control-label" htmlFor="darktopbar-check">Dark</label>
                     </div>
 
                     <div className="custom-control custom-switch mb-1">
                         <input type="radio" className="custom-control-input" name="topbar-color"
-                            value="light" id="lighttopbar-check" />
-                        <label className="custom-control-label" for="lighttopbar-check">Light</label>
+                            defaultValue="light" id="lighttopbar-check" />
+                        <label className="custom-control-label" htmlFor="lighttopbar-check">Light</label>
                     </div>
 
 
