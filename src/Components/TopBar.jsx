@@ -43,7 +43,7 @@ function TopBar(){
 						
 						
 			            <li className="dropdown notification-list topbar-dropdown">
-			                <a className="nav-link dropdown-toggle waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+			                <Link className="nav-link dropdown-toggle waves-effect waves-light" data-toggle="dropdown" to="#" role="button" aria-haspopup="false" aria-expanded="false">
 			                    <i className="fe-bell noti-icon"></i>
 			                    <span className="badge badge-danger rounded-circle noti-icon-badge">9</span>
 							</Link>
@@ -129,7 +129,7 @@ function TopBar(){
 						</li>
 						
 			            <li className="dropdown notification-list topbar-dropdown">
-			                <a className="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+			                <Link className="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light" data-toggle="dropdown" to="#" role="button" aria-haspopup="false" aria-expanded="false">
 			                    <img src="assets/images/users/user-5.jpg" alt="user-image" className="rounded-circle"/>
 			                    <span className="pro-user-name ml-1">
 									Tanjimul Islam  
@@ -211,7 +211,7 @@ function TopBar(){
 						
 			            <li>
 			                {/* Mobile menu toggle (Horizontal Layout)*/}
-			                <a className="navbar-toggle nav-link" data-toggle="collapse" data-target="#topnav-menu-content">
+			                <Link className="navbar-toggle nav-link" data-toggle="collapse" data-target="#topnav-menu-content">
 			                    <div className="lines">
 			                        <span></span>
 			                        <span></span>
@@ -222,7 +222,7 @@ function TopBar(){
 						</li>
 						
 			            <li className="dropdown d-none d-xl-block">
-			                <a className="nav-link dropdown-toggle waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+			                <Link className="nav-link dropdown-toggle waves-effect waves-light" data-toggle="dropdown" to="#" role="button" aria-haspopup="false" aria-expanded="false">
 			                    Create New
 			                    <i className="mdi mdi-chevron-down"></i>
 							</Link>
@@ -263,7 +263,7 @@ function TopBar(){
 						</li>
 						
 			            <li className="dropdown dropdown-mega d-none d-xl-block">
-			                <a className="nav-link dropdown-toggle waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+			                <Link className="nav-link dropdown-toggle waves-effect waves-light" data-toggle="dropdown" to="#" role="button" aria-haspopup="false" aria-expanded="false">
 			                    Mega Menu
 			                    <i className="mdi mdi-chevron-down"></i>
 							</Link>
