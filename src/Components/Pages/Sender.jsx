@@ -37,7 +37,7 @@ function Sender() {
                                             <div className="form-group mb-3">
                                                 <label htmlFor="product-meta-title">Sender Numbers</label>
                                                 <select name="SenderNumberId" className="custom-select " required="">
-                                                    <option value="">Open this select menu</option>
+                                                    <option value="">Open menu</option>
 
 
 
