@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 function NavTabs() {
     return (
         <ul className="nav nav-tabs nav-bordered nav-justified" role="tablist">
