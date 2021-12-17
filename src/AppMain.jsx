@@ -17,6 +17,9 @@ import Sender from "./Components/Pages/Sender";
 import BulkSender from "./Components/Pages/BulkSender";
 import MessagesView from "./Components/Pages/MessagesView";
 import UserView from "./Components/Pages/UserView";
+import UserCreate from "./Components/Pages/UserCreate";
+import SenderNumberView from "./Components/Pages/SenderNumberView";
+import SenderNumberCreate from "./Components/Pages/SenderNumberCreate";
 function AppMain() {
     return (
         <Router>
@@ -70,7 +73,18 @@ function AppMain() {
 
 
                         <Route exact path="/user">
-                            <UserView></UserView>
+                           <UserView></UserView>
+                        </Route>
+                        <Route exact path="/user/create">
+                           <UserCreate></UserCreate>
+                        </Route>
+
+
+                        <Route exact path="/sender-number">
+                           <SenderNumberView></SenderNumberView>
+                        </Route>
+                        <Route exact path="/sender-number/create">
+                           <SenderNumberCreate></SenderNumberCreate>
                         </Route>
 
                         
@@ -95,6 +109,8 @@ function AppMain() {
                         <Route exact path="/register">
                             <AuthRegistration></AuthRegistration>
                         </Route>
+
+                        
 
 
                     </Switch>
