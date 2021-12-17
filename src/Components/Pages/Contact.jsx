@@ -52,7 +52,7 @@ class Contact extends Component {
                         {/* end page title */}
 
                         <div className="row">
-                        <button onClick={()=>this.changeMessage()}>Click</button>
+                            <button onClick={() => this.changeMessage()}>Click</button>
                         </div>
                         {/* end row*/}
                     </div>

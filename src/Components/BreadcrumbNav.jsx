@@ -15,7 +15,7 @@ function BreadcrumbNav(props) {
         </div>
     </div>;
     return (
-            newLocal
+        newLocal
     );
 }
 export default BreadcrumbNav;

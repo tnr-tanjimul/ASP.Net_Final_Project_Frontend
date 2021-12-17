@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-function AuthSocialButton(){
+function AuthSocialButton() {
     return (
         <div className="text-center mt-4">
             <p className="text-muted font-16">Sign in with</p>

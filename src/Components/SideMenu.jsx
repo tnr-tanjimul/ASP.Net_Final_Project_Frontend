@@ -5,7 +5,7 @@ function SideMenu() {
 
             <ul id="side-menu">
 
-                
+
 
 
 
@@ -60,7 +60,7 @@ function SideMenu() {
                     </a>
                     <div className="collapse" id="h_template">
                         <ul className="nav-second-level">
-                        <li> <Link to="/template">View</Link> </li>
+                            <li> <Link to="/template">View</Link> </li>
                             <li><Link to="/template/create">Create</Link></li>
 
                         </ul>
@@ -135,15 +135,15 @@ function SideMenu() {
                 </li>
 
 
-                                                
-
-                                            
 
 
 
-                
 
-                
+
+
+
+
+
             </ul>
         </div>
     );

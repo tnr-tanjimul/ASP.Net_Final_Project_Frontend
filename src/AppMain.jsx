@@ -15,6 +15,8 @@ import TemplateView from "./Components/Pages/TemplateView";
 import TemplateCreate from "./Components/Pages/TemplateCreate";
 import Sender from "./Components/Pages/Sender";
 import BulkSender from "./Components/Pages/BulkSender";
+import MessagesView from "./Components/Pages/MessagesView";
+import UserView from "./Components/Pages/UserView";
 function AppMain() {
     return (
         <Router>
@@ -57,8 +59,18 @@ function AppMain() {
                             <Sender></Sender>
                         </Route>
 
+                        <Route exact path="/messages">
+                            <MessagesView></MessagesView>
+                        </Route>
+
+
                         <Route exact path="/bulksender">
                             <BulkSender></BulkSender>
+                        </Route>
+
+
+                        <Route exact path="/user">
+                            <UserView></UserView>
                         </Route>
 
                         

@@ -32,7 +32,7 @@ function GroupView() {
                                                         <tr>
                                                             <th>ID</th>
                                                             <th>Name</th>
-                                                            <th style={{width: "75px"}}>Action</th>
+                                                            <th style={{ width: "75px" }}>Action</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>

@@ -1,4 +1,4 @@
-function AuthQuotes(){
+function AuthQuotes() {
     return (
         <div className="auth-fluid-right text-center">
             <div className="auth-user-testimonial">
