@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+
+
 function TopBar(){
     return(
         <div className="navbar-custom">
@@ -127,9 +130,9 @@ function TopBar(){
 						
 			            <li className="dropdown notification-list topbar-dropdown">
 			                <a className="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-			                    <img src="https://apwt.tnrsoft.com/assets/images/users/user-5.jpg" alt="user-image" className="rounded-circle"/>
+			                    <img src="assets/images/users/user-5.jpg" alt="user-image" className="rounded-circle"/>
 			                    <span className="pro-user-name ml-1">
-									Tanjimul Sumaya  
+									Tanjimul Islam  
 									<i className="mdi mdi-chevron-down"></i>
 								</span>
 							</a>
@@ -140,30 +143,30 @@ function TopBar(){
 								</div>
 								
 			                    {/* item*/}
-			                    <a href="#" className="dropdown-item notify-item">
+			                    <Link to="#" className="dropdown-item notify-item">
 			                        <i className="fe-user"></i>
 			                        <span>My Account</span>
-								</a>
+								</Link>
 								
 			                    {/* item*/}
-			                    <a href="#" className="dropdown-item notify-item">
+			                    <Link to="#" className="dropdown-item notify-item">
 			                        <i className="fe-settings"></i>
 			                        <span>Settings</span>
-								</a>
+								</Link>
 								
 			                    {/* item*/}
-			                    <a href="password-change.php" className="dropdown-item notify-item">
+			                    <Link to="/password-change" className="dropdown-item notify-item">
 			                        <i className="fe-lock"></i>
 			                        <span>Password Change</span>
-								</a>
+								</Link>
 								
 			                    <div className="dropdown-divider"></div>
 								
 			                    {/* item*/}
-			                    <a href="https://apwt.tnrsoft.com/logout" className="dropdown-item notify-item">
+			                    <Link to="/logout" className="dropdown-item notify-item">
 			                        <i className="fe-log-out"></i>
 			                        <span>Logout</span>
-								</a>
+								</Link>
 								
 							</div>
 						</li>
@@ -178,25 +181,25 @@ function TopBar(){
 					
 			        {/* LOGO */}
 			        <div className="logo-box">
-			            <a href="index.php" className="logo logo-dark text-center">
+			            <Link to="/" className="logo logo-dark text-center">
 			                <span className="logo-sm">
-			                    <img src="https://apwt.tnrsoft.com/assets/images/logo-sm.png" alt="" height="22"/>
+			                    <img src="assets/images/logo-sm.png" alt="" height="22"/>
 			                    {/* <span className="logo-lg-text-light">UBold</span> */}
 							</span>
 			                <span className="logo-lg">
-			                    <img src="https://apwt.tnrsoft.com/assets/images/logo-dark.png" alt="" height="20"/>
+			                    <img src="assets/images/logo-dark.png" alt="" height="20"/>
 			                    {/* <span className="logo-lg-text-light">U</span> */}
 							</span>
-						</a>
+						</Link>
 						
-			            <a href="index.php" className="logo logo-light text-center">
+			            <Link to="/" className="logo logo-light text-center">
 			                <span className="logo-sm">
-			                    <img src="https://apwt.tnrsoft.com/assets/images/logo-sm.png" alt="" height="22"/>
+			                    <img src="assets/images/logo-sm.png" alt="" height="22"/>
 							</span>
 			                <span className="logo-lg">
-			                    <img src="https://apwt.tnrsoft.com/assets/images/logo-light.png" alt="" height="28"/>
+			                    <img src="assets/images/logo-light.png" alt="" height="28"/>
 							</span>
-						</a>
+						</Link>
 					</div>
 					
 			        <ul className="list-unstyled topnav-menu topnav-menu-left m-0">
