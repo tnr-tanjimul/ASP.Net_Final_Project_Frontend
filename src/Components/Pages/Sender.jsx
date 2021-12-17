@@ -37,12 +37,12 @@ function Sender() {
                                             <div className="form-group mb-3">
                                                 <label htmlFor="product-meta-title">Sender Numbers</label>
                                                 <select name="SenderNumberId" className="custom-select " required="">
-                                                    <option defaultValue="">Open this select menu</option>
+                                                    <option value="">Open this select menu</option>
 
 
 
-                                                    <option defaultValue="1">+8801833245245</option>
-                                                    <option defaultValue="2">+8801844784850</option>
+                                                    <option value="1">+8801833245245</option>
+                                                    <option value="2">+8801844784850</option>
 
 
                                                 </select>
@@ -53,12 +53,12 @@ function Sender() {
                                             <div className="form-group mb-3">
                                                 <label htmlFor="product-meta-title">Templates</label>
                                                 <select name="TemplateId" className="custom-select " onChange="fetchTemplate(this.defaultValue)" required="">
-                                                    <option defaultValue="0">None</option>
+                                                    <option value="0">None</option>
 
 
 
-                                                    <option defaultValue="2">tan                                                                                                 </option>
-                                                    <option defaultValue="14">CseBatch                                                                                            </option>
+                                                    <option value="2">tan                                                                                                 </option>
+                                                    <option value="14">CseBatch                                                                                            </option>
 
 
                                                 </select>
