@@ -3,7 +3,7 @@ import LeftSideBar from "../LeftSidebar";
 import RightSidebar from "../RightSidebar";
 import TopBar from "../TopBar";
 import BreadcrumbNav from "../BreadcrumbNav";
-
+import { Link } from "react-router-dom";
 function MessagesView() {
     return (
         <>
@@ -61,8 +61,8 @@ Good Morning.
                                     </td>
 
                                     <td>
-                                        <a href="#" className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></a>
-                                        <a href="/Message/Delete/26" className="action-icon"> <i className="mdi mdi-delete"></i></a>
+                                        <Link to="#" className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></Link>
+                                        <Link to="/Message/Delete/26" className="action-icon"> <i className="mdi mdi-delete"></i></Link>
                                     </td>
                                 </tr>
                                 <tr>
@@ -87,8 +87,8 @@ Good Morning
                                     </td>
 
                                     <td>
-                                        <a href="#" className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></a>
-                                        <a href="/Message/Delete/27" className="action-icon"> <i className="mdi mdi-delete"></i></a>
+                                        <Link to="#" className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></Link>
+                                        <Link to="/Message/Delete/27" className="action-icon"> <i className="mdi mdi-delete"></i></Link>
                                     </td>
                                 </tr>
                                 <tr>
@@ -113,8 +113,8 @@ Good Morning
                                     </td>
 
                                     <td>
-                                        <a href="#" className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></a>
-                                        <a href="/Message/Delete/28" className="action-icon"> <i className="mdi mdi-delete"></i></a>
+                                        <Link to="#" className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></Link>
+                                        <Link to="/Message/Delete/28" className="action-icon"> <i className="mdi mdi-delete"></i></Link>
                                     </td>
                                 </tr>
                                 <tr>
@@ -138,8 +138,8 @@ Good Morning
                                     </td>
 
                                     <td>
-                                        <a href="#" className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></a>
-                                        <a href="/Message/Delete/29" className="action-icon"> <i className="mdi mdi-delete"></i></a>
+                                        <Link to="#" className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></Link>
+                                        <Link to="/Message/Delete/29" className="action-icon"> <i className="mdi mdi-delete"></i></Link>
                                     </td>
                                 </tr>
                                 <tr>
@@ -163,8 +163,8 @@ Good Morning
                                     </td>
 
                                     <td>
-                                        <a href="#" className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></a>
-                                        <a href="/Message/Delete/30" className="action-icon"> <i className="mdi mdi-delete"></i></a>
+                                        <Link to="#" className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></Link>
+                                        <Link to="/Message/Delete/30" className="action-icon"> <i className="mdi mdi-delete"></i></Link>
                                     </td>
                                 </tr>
                                 <tr>
@@ -188,8 +188,8 @@ Good Morning
                                     </td>
 
                                     <td>
-                                        <a href="#" className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></a>
-                                        <a href="/Message/Delete/44" className="action-icon"> <i className="mdi mdi-delete"></i></a>
+                                        <Link to="#" className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></Link>
+                                        <Link to="/Message/Delete/44" className="action-icon"> <i className="mdi mdi-delete"></i></Link>
                                     </td>
                                 </tr>
                                 <tr>
@@ -213,8 +213,8 @@ Good Morning
                                     </td>
 
                                     <td>
-                                        <a href="#" className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></a>
-                                        <a href="/Message/Delete/48" className="action-icon"> <i className="mdi mdi-delete"></i></a>
+                                        <Link to="#" className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></Link>
+                                        <Link to="/Message/Delete/48" className="action-icon"> <i className="mdi mdi-delete"></i></Link>
                                     </td>
                                 </tr>
                                 <tr>
@@ -238,8 +238,8 @@ Good Morning
                                     </td>
 
                                     <td>
-                                        <a href="#" className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></a>
-                                        <a href="/Message/Delete/49" className="action-icon"> <i className="mdi mdi-delete"></i></a>
+                                        <Link to="#" className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></Link>
+                                        <Link to="/Message/Delete/49" className="action-icon"> <i className="mdi mdi-delete"></i></Link>
                                     </td>
                                 </tr>
                                 <tr>
@@ -263,8 +263,8 @@ Good Morning
                                     </td>
 
                                     <td>
-                                        <a href="#" className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></a>
-                                        <a href="/Message/Delete/53" className="action-icon"> <i className="mdi mdi-delete"></i></a>
+                                        <Link to="#" className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></Link>
+                                        <Link to="/Message/Delete/53" className="action-icon"> <i className="mdi mdi-delete"></i></Link>
                                     </td>
                                 </tr>
                                 <tr>
@@ -288,8 +288,8 @@ Good Morning
                                     </td>
 
                                     <td>
-                                        <a href="#" className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></a>
-                                        <a href="/Message/Delete/54" className="action-icon"> <i className="mdi mdi-delete"></i></a>
+                                        <Link to="#" className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></Link>
+                                        <Link to="/Message/Delete/54" className="action-icon"> <i className="mdi mdi-delete"></i></Link>
                                     </td>
                                 </tr>
                                 <tr>
@@ -313,8 +313,8 @@ Good Morning
                                     </td>
 
                                     <td>
-                                        <a href="#" className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></a>
-                                        <a href="/Message/Delete/55" className="action-icon"> <i className="mdi mdi-delete"></i></a>
+                                        <Link to="#" className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></Link>
+                                        <Link to="/Message/Delete/55" className="action-icon"> <i className="mdi mdi-delete"></i></Link>
                                     </td>
                                 </tr>
                                 <tr>
@@ -338,8 +338,8 @@ Good Morning
                                     </td>
 
                                     <td>
-                                        <a href="#" className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></a>
-                                        <a href="/Message/Delete/56" className="action-icon"> <i className="mdi mdi-delete"></i></a>
+                                        <Link to="#" className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></Link>
+                                        <Link to="/Message/Delete/56" className="action-icon"> <i className="mdi mdi-delete"></i></Link>
                                     </td>
                                 </tr>
                                 <tr>
@@ -363,8 +363,8 @@ Good Morning
                                     </td>
 
                                     <td>
-                                        <a href="#" className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></a>
-                                        <a href="/Message/Delete/57" className="action-icon"> <i className="mdi mdi-delete"></i></a>
+                                        <Link to="#" className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></Link>
+                                        <Link to="/Message/Delete/57" className="action-icon"> <i className="mdi mdi-delete"></i></Link>
                                     </td>
                                 </tr>
                                 <tr>
@@ -388,8 +388,8 @@ Good Morning
                                     </td>
 
                                     <td>
-                                        <a href="#" className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></a>
-                                        <a href="/Message/Delete/58" className="action-icon"> <i className="mdi mdi-delete"></i></a>
+                                        <Link to="#" className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></Link>
+                                        <Link to="/Message/Delete/58" className="action-icon"> <i className="mdi mdi-delete"></i></Link>
                                     </td>
                                 </tr>
                                 <tr>
@@ -413,8 +413,8 @@ Good Morning
                                     </td>
 
                                     <td>
-                                        <a href="#" className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></a>
-                                        <a href="/Message/Delete/59" className="action-icon"> <i className="mdi mdi-delete"></i></a>
+                                        <Link to="#" className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></Link>
+                                        <Link to="/Message/Delete/59" className="action-icon"> <i className="mdi mdi-delete"></i></Link>
                                     </td>
                                 </tr>
                                 <tr>
@@ -438,8 +438,8 @@ Good Morning
                                     </td>
 
                                     <td>
-                                        <a href="#" className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></a>
-                                        <a href="/Message/Delete/60" className="action-icon"> <i className="mdi mdi-delete"></i></a>
+                                        <Link to="#" className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></Link>
+                                        <Link to="/Message/Delete/60" className="action-icon"> <i className="mdi mdi-delete"></i></Link>
                                     </td>
                                 </tr>
                                 <tr>
@@ -463,8 +463,8 @@ Good Morning
                                     </td>
 
                                     <td>
-                                        <a href="#" className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></a>
-                                        <a href="/Message/Delete/65" className="action-icon"> <i className="mdi mdi-delete"></i></a>
+                                        <Link to="#" className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></Link>
+                                        <Link to="/Message/Delete/65" className="action-icon"> <i className="mdi mdi-delete"></i></Link>
                                     </td>
                                 </tr>
 

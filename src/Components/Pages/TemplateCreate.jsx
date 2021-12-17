@@ -3,7 +3,7 @@ import Footer from "../Footer";
 import LeftSideBar from "../LeftSidebar";
 import RightSidebar from "../RightSidebar";
 import TopBar from "../TopBar";
-
+import { Link } from "react-router-dom";
 function TemplateCreate() {
     return (
         <>
@@ -39,19 +39,19 @@ function TemplateCreate() {
                                             <div className="form-group mb-3">
                                                 <label htmlFor="product-meta-keywords">Name</label>
                                                 <input type="text" className="form-control" name="Name" id="Name" placeholder="" />
-                                                <span className="field-validation-valid text-danger" data-valmsg-htmlfor="Name" data-valmsg-replace="true"></span>
+                                                <span className="field-validation-valid text-danger" data-valmsg-htmlhtmlFor="Name" data-valmsg-replace="true"></span>
                                             </div>
 
 
                                             <div className="form-group mb-3">
                                                 <label htmlFor="messageInput">Message</label>
                                                 <textarea name="message" className="form-control" rows="5" id="messageInput" data-counter="#smsCounter" placeholder="Please enter description"></textarea>
-                                                <span className="field-validation-valid text-danger" data-valmsg-htmlfor="Message" data-valmsg-replace="true"></span>
+                                                <span className="field-validation-valid text-danger" data-valmsg-htmlhtmlFor="Message" data-valmsg-replace="true"></span>
                                             </div>
 
 
                                             <div className="text-center mb-3">
-                                                <a href="/Template/Index" type="button" className="btn w-sm btn-light waves-effect">Cancel</a>
+                                                <Link to="/Template/Index" type="button" className="btn w-sm btn-light waves-effect">Cancel</Link>
                                                 <button type="submit" className="btn w-sm btn-success waves-effect waves-light">Save</button>
 
                                             </div>

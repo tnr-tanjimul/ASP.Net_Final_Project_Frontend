@@ -24,9 +24,9 @@ function TopBar(){
 						</li>
 						
 			            <li className="dropdown d-inline-block d-lg-none">
-			                <a className="nav-link dropdown-toggle arrow-none waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+			                <Link className="nav-link dropdown-toggle arrow-none waves-effect waves-light" data-toggle="dropdown" to="#" role="button" aria-haspopup="false" aria-expanded="false">
 			                    <i className="fe-search noti-icon"></i>
-							</a>
+							</Link>
 			                <div className="dropdown-menu dropdown-lg dropdown-menu-right p-0">
 			                    <form className="p-3">
 			                        <input type="text" className="form-control" placeholder="Search ..." aria-label="Recipient's username"/>
@@ -35,9 +35,9 @@ function TopBar(){
 						</li>
 						
 			            <li className="dropdown d-none d-lg-inline-block">
-			                <a className="nav-link dropdown-toggle arrow-none waves-effect waves-light" data-toggle="fullscreen" href="#">
+			                <Link className="nav-link dropdown-toggle arrow-none waves-effect waves-light" data-toggle="fullscreen" to="#">
 			                    <i className="fe-maximize noti-icon"></i>
-							</a>
+							</Link>
 						</li>
 						
 						
@@ -46,16 +46,16 @@ function TopBar(){
 			                <a className="nav-link dropdown-toggle waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
 			                    <i className="fe-bell noti-icon"></i>
 			                    <span className="badge badge-danger rounded-circle noti-icon-badge">9</span>
-							</a>
+							</Link>
 			                <div className="dropdown-menu dropdown-menu-right dropdown-lg">
 								
 			                    {/* item*/}
 			                    <div className="dropdown-item noti-title">
 			                        <h5 className="m-0">
 			                            <span className="float-right">
-			                                <a href="" className="text-dark">
+			                                <Link to="" className="text-dark">
 			                                    <small>Clear All</small>
-											</a>
+											</Link>
 										</span>Notification
 									</h5>
 								</div>
@@ -73,7 +73,7 @@ function TopBar(){
 														
 														
 			                                            {/* item*/}
-			                                            <a href="#" className="dropdown-item notify-item">
+			                                            <Link to="#" className="dropdown-item notify-item">
 			                                                <div className="notify-icon">
 			                                                    <img src="assets/images/users/user-4.jpg" className="img-fluid rounded-circle" alt=""/>
 															</div>
@@ -81,22 +81,22 @@ function TopBar(){
 			                                                <p className="text-muted mb-0 user-msg">
 			                                                    <small>Wow ! this admin looks good and awesome design</small>
 															</p>
-														</a>
+														</Link>
 														
 			                                            {/* item*/}
-			                                            <a href="#" className="dropdown-item notify-item">
+			                                            <Link to="#" className="dropdown-item notify-item">
 			                                                <div className="notify-icon bg-warning">
 			                                                    <i className="mdi mdi-account-plus"></i>
 															</div>
 			                                                <p className="notify-details">New user registered.
 			                                                    <small className="text-muted">5 hours ago</small>
 															</p>
-														</a>
+														</Link>
 														
 														
 														
 			                                            {/* item*/}
-			                                            <a href="#" className="dropdown-item notify-item">
+			                                            <Link to="#" className="dropdown-item notify-item">
 			                                                <div className="notify-icon bg-secondary">
 			                                                    <i className="mdi mdi-heart"></i>
 															</div>
@@ -104,7 +104,7 @@ function TopBar(){
 			                                                    <b>Admin</b>
 			                                                    <small className="text-muted">13 days ago</small>
 															</p>
-														</a>
+														</Link>
 													</div>
 												</div>
 											</div>
@@ -120,10 +120,10 @@ function TopBar(){
 								</div>
 								
 			                    {/* All*/}
-			                    <a href="#" className="dropdown-item text-center text-primary notify-item notify-all">
+			                    <Link to="#" className="dropdown-item text-center text-primary notify-item notify-all">
 			                        View all
 			                        <i className="fe-arrow-right"></i>
-								</a>
+								</Link>
 								
 							</div>
 						</li>
@@ -135,7 +135,7 @@ function TopBar(){
 									Tanjimul Islam  
 									<i className="mdi mdi-chevron-down"></i>
 								</span>
-							</a>
+							</Link>
 			                <div className="dropdown-menu dropdown-menu-right profile-dropdown ">
 			                    {/* item*/}
 			                    <div className="dropdown-header noti-title">
@@ -172,9 +172,9 @@ function TopBar(){
 						</li>
 						
 			            <li className="dropdown notification-list">
-			                <a href="#" className="nav-link right-bar-toggle waves-effect waves-light">
+			                <Link to="#" className="nav-link right-bar-toggle waves-effect waves-light">
 			                    <i className="fe-settings noti-icon"></i>
-							</a>
+							</Link>
 						</li>
 						
 					</ul>
@@ -217,7 +217,7 @@ function TopBar(){
 			                        <span></span>
 			                        <span></span>
 								</div>
-							</a>
+							</Link>
 			                {/* End mobile menu toggle*/}
 						</li>
 						
@@ -225,39 +225,39 @@ function TopBar(){
 			                <a className="nav-link dropdown-toggle waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
 			                    Create New
 			                    <i className="mdi mdi-chevron-down"></i>
-							</a>
+							</Link>
 			                <div className="dropdown-menu">
 			                    {/* item*/}
-			                    <a href="#" className="dropdown-item">
+			                    <Link to="#" className="dropdown-item">
 			                        <i className="fe-briefcase mr-1"></i>
 			                        <span>New Projects</span>
-								</a>
+								</Link>
 								
 			                    {/* item*/}
-			                    <a href="#" className="dropdown-item">
+			                    <Link to="#" className="dropdown-item">
 			                        <i className="fe-user mr-1"></i>
 			                        <span>Create Users</span>
-								</a>
+								</Link>
 								
 			                    {/* item*/}
-			                    <a href="#" className="dropdown-item">
+			                    <Link to="#" className="dropdown-item">
 			                        <i className="fe-bar-chart-line- mr-1"></i>
 			                        <span>Revenue Report</span>
-								</a>
+								</Link>
 								
 			                    {/* item*/}
-			                    <a href="#" className="dropdown-item">
+			                    <Link to="#" className="dropdown-item">
 			                        <i className="fe-settings mr-1"></i>
 			                        <span>Settings</span>
-								</a>
+								</Link>
 								
 			                    <div className="dropdown-divider"></div>
 								
 			                    {/* item*/}
-			                    <a href="#" className="dropdown-item">
+			                    <Link to="#" className="dropdown-item">
 			                        <i className="fe-headphones mr-1"></i>
 			                        <span>Help &amp; Support</span>
-								</a>
+								</Link>
 								
 							</div>
 						</li>
@@ -266,7 +266,7 @@ function TopBar(){
 			                <a className="nav-link dropdown-toggle waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
 			                    Mega Menu
 			                    <i className="mdi mdi-chevron-down"></i>
-							</a>
+							</Link>
 			                <div className="dropdown-menu dropdown-megamenu">
 			                    <div className="row">
 			                        <div className="col-sm-8">
@@ -276,25 +276,25 @@ function TopBar(){
 			                                    <h5 className="text-dark mt-0">UI Components</h5>
 			                                    <ul className="list-unstyled megamenu-list">
 			                                        <li>
-			                                            <a href="#">Widgets</a>
+			                                            <Link to="#">Widgets</Link>
 													</li>
 			                                        <li>
-			                                            <a href="#">Nestable List</a>
+			                                            <Link to="#">Nestable List</Link>
 													</li>
 			                                        <li>
-			                                            <a href="#">Range Sliders</a>
+			                                            <Link to="#">Range Sliders</Link>
 													</li>
 			                                        <li>
-			                                            <a href="#">Masonry Items</a>
+			                                            <Link to="#">Masonry Items</Link>
 													</li>
 			                                        <li>
-			                                            <a href="#">Sweet Alerts</a>
+			                                            <Link to="#">Sweet Alerts</Link>
 													</li>
 			                                        <li>
-			                                            <a href="#">Treeview Page</a>
+			                                            <Link to="#">Treeview Page</Link>
 													</li>
 			                                        <li>
-			                                            <a href="#">Tour Page</a>
+			                                            <Link to="#">Tour Page</Link>
 													</li>
 												</ul>
 											</div>
@@ -303,25 +303,25 @@ function TopBar(){
 			                                    <h5 className="text-dark mt-0">Applications</h5>
 			                                    <ul className="list-unstyled megamenu-list">
 			                                        <li>
-			                                            <a href="#">eCommerce Pages</a>
+			                                            <Link to="#">eCommerce Pages</Link>
 													</li>
 			                                        <li>
-			                                            <a href="#">CRM Pages</a>
+			                                            <Link to="#">CRM Pages</Link>
 													</li>
 			                                        <li>
-			                                            <a href="#">Email</a>
+			                                            <Link to="#">Email</Link>
 													</li>
 			                                        <li>
-			                                            <a href="#">Calendar</a>
+			                                            <Link to="#">Calendar</Link>
 													</li>
 			                                        <li>
-			                                            <a href="#">Team Contacts</a>
+			                                            <Link to="#">Team Contacts</Link>
 													</li>
 			                                        <li>
-			                                            <a href="#">Task Board</a>
+			                                            <Link to="#">Task Board</Link>
 													</li>
 			                                        <li>
-			                                            <a href="#">Email Templates</a>
+			                                            <Link to="#">Email Templates</Link>
 													</li>
 												</ul>
 											</div>
@@ -330,25 +330,25 @@ function TopBar(){
 			                                    <h5 className="text-dark mt-0">Extra Pages</h5>
 			                                    <ul className="list-unstyled megamenu-list">
 			                                        <li>
-			                                            <a href="#">Left Sidebar with User</a>
+			                                            <Link to="#">Left Sidebar with User</Link>
 													</li>
 			                                        <li>
-			                                            <a href="#">Menu Collapsed</a>
+			                                            <Link to="#">Menu Collapsed</Link>
 													</li>
 			                                        <li>
-			                                            <a href="#">Small Left Sidebar</a>
+			                                            <Link to="#">Small Left Sidebar</Link>
 													</li>
 			                                        <li>
-			                                            <a href="#">New Header Style</a>
+			                                            <Link to="#">New Header Style</Link>
 													</li>
 			                                        <li>
-			                                            <a href="#">Search Result</a>
+			                                            <Link to="#">Search Result</Link>
 													</li>
 			                                        <li>
-			                                            <a href="#">Gallery Pages</a>
+			                                            <Link to="#">Gallery Pages</Link>
 													</li>
 			                                        <li>
-			                                            <a href="#">Maintenance &amp; Coming Soon</a>
+			                                            <Link to="#">Maintenance &amp; Coming Soon</Link>
 													</li>
 												</ul>
 											</div>

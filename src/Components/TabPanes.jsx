@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 function TabPanes() {
     return (
         <div className="tab-content pt-0">
@@ -134,8 +135,8 @@ function TabPanes() {
                     <button className="btn btn-primary btn-block mt-4" id="resetBtn">Reset to
                         Default</button>
 
-                    <a href="#" className="btn btn-danger btn-block mt-3" target="_blank"><i
-                        className="mdi mdi-basket mr-1"></i> Upgrade Now</a>
+                    <Link to="#" className="btn btn-danger btn-block mt-3" target="_blank"><i
+                        className="mdi mdi-basket mr-1"></i> Upgrade Now</Link>
 
                 </div>
 

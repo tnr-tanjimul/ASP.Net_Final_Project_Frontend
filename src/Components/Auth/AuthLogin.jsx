@@ -1,7 +1,7 @@
 import AuthLogo from "../AuthLogo";
 import AuthQuotes from "../AuthQuotes";
 import AuthSocialButton from "../AuthSocialButton";
-
+import { Link } from "react-router-dom";
 function AuthLogin(){
     return(
 
@@ -33,10 +33,10 @@ function AuthLogin(){
                         <div className="form-group">
                             <label htmlFor="Email">Email address</label>
                             <input className="form-control" type="text" name="Email" id="Email" required="" placeholder="Enter your email"/>
-                            <span className="field-validation-valid text-danger" data-valmsg-htmlfor="Email" data-valmsg-replace="true"></span>
+                            <span className="field-validation-valid text-danger" data-valmsg-htmlhtmlFor="Email" data-valmsg-replace="true"></span>
                         </div>
                         <div className="form-group">
-                            <a href="auth-recoverpw-2.php" className="text-muted float-right"><small>Forgot your password?</small></a>
+                            <Link to="auth-recoverpw-2.php" className="text-muted float-right"><small>Forgot your password?</small></Link>
                             <label htmlFor="Password">Password</label>
                             <div className="input-group input-group-merge">
                                 <input type="password" name="Password" id="Password" className="form-control" placeholder="Enter your password"/>
@@ -45,7 +45,7 @@ function AuthLogin(){
                                         <span className="password-eye"></span>
                                     </div>
                                 </div>
-                                <span className="field-validation-valid text-danger" data-valmsg-htmlfor="Password" data-valmsg-replace="true"></span>
+                                <span className="field-validation-valid text-danger" data-valmsg-htmlhtmlFor="Password" data-valmsg-replace="true"></span>
                             </div>
                         </div>
 
@@ -64,7 +64,7 @@ function AuthLogin(){
                     {/**{/* end form*/} 
                     {/* Footer*/}
                     <footer className="footer footer-alt">
-                        <p className="text-muted">Don't have an account? <a href="/Auth/Registration" className="text-muted ml-1"><b>Sign Up</b></a></p>
+                        <p className="text-muted">Don't have an account? <Link to="/Auth/Registration" className="text-muted ml-1"><b>Sign Up</b></Link></p>
                     </footer>
 
                 </div> {/* end .card-body */}

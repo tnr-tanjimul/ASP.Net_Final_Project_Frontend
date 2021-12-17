@@ -3,6 +3,7 @@ import LeftSideBar from "../LeftSidebar";
 import RightSidebar from "../RightSidebar";
 import TopBar from "../TopBar";
 import BreadcrumbNav from "../BreadcrumbNav";
+import { Link } from "react-router-dom";
 function ContactView() {
     return (
         <>
@@ -57,8 +58,8 @@ function ContactView() {
 
 
                                                             <td>
-                                                                <a href="/Contact/Edit/22" className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></a>
-                                                                <a href="/Contact/Delete/22" className="action-icon"> <i className="mdi mdi-delete"></i></a>
+                                                                <Link to="/Contact/Edit/22" className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></Link>
+                                                                <Link to="/Contact/Delete/22" className="action-icon"> <i className="mdi mdi-delete"></i></Link>
                                                             </td>
                                                         </tr>
 

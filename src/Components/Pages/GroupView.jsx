@@ -3,7 +3,7 @@ import LeftSideBar from "../LeftSidebar";
 import RightSidebar from "../RightSidebar";
 import TopBar from "../TopBar";
 import BreadcrumbNav from "../BreadcrumbNav";
-
+import { Link } from "react-router-dom";
 function GroupView() {
     return (
         <>
@@ -48,8 +48,8 @@ function GroupView() {
 
 
                                                             <td>
-                                                                <a href="/Group/Edit/1" className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></a>
-                                                                <a href="/Group/Delete/1" className="action-icon"> <i className="mdi mdi-delete"></i></a>
+                                                                <Link to="/Group/Edit/1" className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></Link>
+                                                                <Link to="/Group/Delete/1" className="action-icon"> <i className="mdi mdi-delete"></i></Link>
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -64,8 +64,8 @@ function GroupView() {
 
 
                                                             <td>
-                                                                <a href="/Group/Edit/3" className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></a>
-                                                                <a href="/Group/Delete/3" className="action-icon"> <i className="mdi mdi-delete"></i></a>
+                                                                <Link to="/Group/Edit/3" className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></Link>
+                                                                <Link to="/Group/Delete/3" className="action-icon"> <i className="mdi mdi-delete"></i></Link>
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -80,8 +80,8 @@ function GroupView() {
 
 
                                                             <td>
-                                                                <a href="/Group/Edit/4" className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></a>
-                                                                <a href="/Group/Delete/4" className="action-icon"> <i className="mdi mdi-delete"></i></a>
+                                                                <Link to="/Group/Edit/4" className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></Link>
+                                                                <Link to="/Group/Delete/4" className="action-icon"> <i className="mdi mdi-delete"></i></Link>
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -96,8 +96,8 @@ function GroupView() {
 
 
                                                             <td>
-                                                                <a href="/Group/Edit/7" className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></a>
-                                                                <a href="/Group/Delete/7" className="action-icon"> <i className="mdi mdi-delete"></i></a>
+                                                                <Link to="/Group/Edit/7" className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></Link>
+                                                                <Link to="/Group/Delete/7" className="action-icon"> <i className="mdi mdi-delete"></i></Link>
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -112,8 +112,8 @@ function GroupView() {
 
 
                                                             <td>
-                                                                <a href="/Group/Edit/17" className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></a>
-                                                                <a href="/Group/Delete/17" className="action-icon"> <i className="mdi mdi-delete"></i></a>
+                                                                <Link to="/Group/Edit/17" className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></Link>
+                                                                <Link to="/Group/Delete/17" className="action-icon"> <i className="mdi mdi-delete"></i></Link>
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -128,8 +128,8 @@ function GroupView() {
 
 
                                                             <td>
-                                                                <a href="/Group/Edit/25" className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></a>
-                                                                <a href="/Group/Delete/25" className="action-icon"> <i className="mdi mdi-delete"></i></a>
+                                                                <Link to="/Group/Edit/25" className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></Link>
+                                                                <Link to="/Group/Delete/25" className="action-icon"> <i className="mdi mdi-delete"></i></Link>
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -144,8 +144,8 @@ function GroupView() {
 
 
                                                             <td>
-                                                                <a href="/Group/Edit/27" className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></a>
-                                                                <a href="/Group/Delete/27" className="action-icon"> <i className="mdi mdi-delete"></i></a>
+                                                                <Link to="/Group/Edit/27" className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></Link>
+                                                                <Link to="/Group/Delete/27" className="action-icon"> <i className="mdi mdi-delete"></i></Link>
                                                             </td>
                                                         </tr>
 

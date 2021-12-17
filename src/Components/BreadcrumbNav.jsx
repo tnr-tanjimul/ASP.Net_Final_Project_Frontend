@@ -1,11 +1,12 @@
+import { Link } from "react-router-dom";
 function BreadcrumbNav(props) {
     const newLocal = <div className="row">
         <div className="col-12">
             <div className="page-title-box">
                 <div className="page-title-right">
                     <ol className="breadcrumb m-0">
-                        <li className="breadcrumb-item"><a href="#">SMS Gateway</a></li>
-                        <li className="breadcrumb-item"><a href="#">{props.page}</a></li>
+                        <li className="breadcrumb-item"><Link to="#">SMS Gateway</Link></li>
+                        <li className="breadcrumb-item"><Link to="#">{props.page}</Link></li>
 
                     </ol>
                 </div>

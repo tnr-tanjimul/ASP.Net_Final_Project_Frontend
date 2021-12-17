@@ -3,6 +3,7 @@ import LeftSideBar from "../LeftSidebar";
 import RightSidebar from "../RightSidebar";
 import TopBar from "../TopBar";
 import DashItem from "./DashItem";
+import { Link } from "react-router-dom";
 
 function Dashboard() {
     return (
@@ -32,12 +33,12 @@ function Dashboard() {
                                                 </div>
                                             </div>
                                         </div>
-                                        <a href="#" className="btn btn-blue btn-sm ml-2">
+                                        <Link to="#" className="btn btn-blue btn-sm ml-2">
                                             <i className="mdi mdi-autorenew"></i>
-                                        </a>
-                                        <a href="#" className="btn btn-blue btn-sm ml-1">
+                                        </Link>
+                                        <Link to="#" className="btn btn-blue btn-sm ml-1">
                                             <i className="mdi mdi-filter-variant"></i>
-                                        </a>
+                                        </Link>
                                     </form>
                                 </div>
                                 <h4 className="page-title">Dashboard</h4>

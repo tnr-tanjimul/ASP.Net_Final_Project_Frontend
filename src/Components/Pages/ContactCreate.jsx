@@ -3,6 +3,7 @@ import LeftSideBar from "../LeftSidebar";
 import RightSidebar from "../RightSidebar";
 import TopBar from "../TopBar";
 import BreadcrumbNav from "../BreadcrumbNav";
+import { Link } from "react-router-dom";
 function ContactCreate() {
     return (
         <>
@@ -70,7 +71,7 @@ function ContactCreate() {
 
 
                                             <div className="text-center mb-3">
-                                                <a href="/Contact/Index" type="button" className="btn w-sm btn-light waves-effect">Cancel</a>
+                                                <Link to="/Contact/Index" type="button" className="btn w-sm btn-light waves-effect">Cancel</Link>
                                                 <button type="submit" className="btn w-sm btn-success waves-effect waves-light">Save</button>
 
                                             </div>

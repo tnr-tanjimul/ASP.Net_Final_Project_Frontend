@@ -3,7 +3,7 @@ import Footer from "../Footer";
 import LeftSideBar from "../LeftSidebar";
 import RightSidebar from "../RightSidebar";
 import TopBar from "../TopBar";
-
+import { Link } from "react-router-dom";
 function BulkSender() {
     return (
         <>
@@ -33,7 +33,7 @@ function BulkSender() {
 
 
                                             <div className="form-group mb-3">
-                                                <label for="product-meta-title">Sender Numbers</label>
+                                                <label htmlFor="product-meta-title">Sender Numbers</label>
                                                 <select name="SenderNumberId" className="custom-select " required="">
                                                     <option defaultValue="">Open this select menu</option>
 
@@ -44,12 +44,12 @@ function BulkSender() {
 
 
                                                 </select>
-                                                <span className="field-validation-valid text-danger" data-valmsg-for="SenderNumberId" data-valmsg-replace="true"></span>
+                                                <span className="field-validation-valid text-danger" data-valmsg-htmlFor="SenderNumberId" data-valmsg-replace="true"></span>
                                             </div>
 
 
                                             <div className="form-group mb-3">
-                                                <label for="product-meta-title">Templates</label>
+                                                <label htmlFor="product-meta-title">Templates</label>
                                                 <select name="TemplateId" className="custom-select " onChange="fetchTemplate(this.defaultValue)" required="">
                                                     <option defaultValue="0">None</option>
 
@@ -60,12 +60,12 @@ function BulkSender() {
 
 
                                                 </select>
-                                                <span className="field-validation-valid text-danger" data-valmsg-for="Templates" data-valmsg-replace="true"></span>
+                                                <span className="field-validation-valid text-danger" data-valmsg-htmlFor="Templates" data-valmsg-replace="true"></span>
                                             </div>
 
 
                                             <div className="form-group mb-3">
-                                                <label for="product-meta-title">Group</label>
+                                                <label htmlFor="product-meta-title">Group</label>
                                                 <select name="GroupId" className="custom-select " required="">
                                                     <option defaultValue="0">None</option>
 
@@ -77,15 +77,15 @@ function BulkSender() {
 
 
                                                 </select>
-                                                <span className="field-validation-valid text-danger" data-valmsg-for="GroupId" data-valmsg-replace="true"></span>
+                                                <span className="field-validation-valid text-danger" data-valmsg-htmlFor="GroupId" data-valmsg-replace="true"></span>
                                             </div>
 
 
 
                                             <div className="form-group mb-3">
-                                                <label for="messageInput">Message</label>
+                                                <label htmlFor="messageInput">Message</label>
                                                 <textarea data-counter="#smsCounter" name="message" className="form-control" rows="5" id="messageInput" placeholder="Please enter description"></textarea>
-                                                <span className="field-validation-valid text-danger" data-valmsg-for="Message" data-valmsg-replace="true"></span>
+                                                <span className="field-validation-valid text-danger" data-valmsg-htmlFor="Message" data-valmsg-replace="true"></span>
                                             </div>
 
                                             <ul>You Can use Name Place Holder for Add contact name</ul>

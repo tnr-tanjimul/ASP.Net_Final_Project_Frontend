@@ -3,6 +3,7 @@ import Footer from "../Footer";
 import LeftSideBar from "../LeftSidebar";
 import RightSidebar from "../RightSidebar";
 import TopBar from "../TopBar";
+import { Link } from "react-router-dom";
 
 function GroupCreate() {
     return (
@@ -49,7 +50,7 @@ function GroupCreate() {
 
 
                                             <div className="text-center mb-3">
-                                                <a href="/Group/Index" type="button" className="btn w-sm btn-light waves-effect">Cancel</a>
+                                                <Link to="/Group/Index" type="button" className="btn w-sm btn-light waves-effect">Cancel</Link>
                                                 <button type="submit" className="btn w-sm btn-success waves-effect waves-light">Save</button>
 
                                             </div>

@@ -1,7 +1,7 @@
 import AuthLogo from "../AuthLogo";
 import AuthQuotes from "../AuthQuotes";
 import AuthSocialButton from "../AuthSocialButton";
-
+import { Link } from "react-router-dom";
 function AuthRegistration(){
     return (
         <div className="auth-fluid">
@@ -34,7 +34,7 @@ function AuthRegistration(){
                         <div className="form-group">
                             <label htmlFor="Name">Full Name</label>
                             <input className="form-control " type="text" name="Name" id="Name" placeholder="Enter your name" autoComplete="name" autoFocus/>
-                            <span className="field-validation-valid text-danger" data-valmsg-htmlfor="Name" data-valmsg-replace="true"></span>
+                            <span className="field-validation-valid text-danger" data-valmsg-htmlhtmlFor="Name" data-valmsg-replace="true"></span>
 
                         </div>
 
@@ -43,10 +43,10 @@ function AuthRegistration(){
                         <div className="form-group">
                             <label htmlFor="Email">Email address</label>
                             <input className="form-control " type="text" name="Email" id="Email" placeholder="Enter your email" autoComplete="email" autoFocus/>
-                            <span className="field-validation-valid text-danger" data-valmsg-htmlfor="Email" data-valmsg-replace="true"></span>
+                            <span className="field-validation-valid text-danger" data-valmsg-htmlhtmlFor="Email" data-valmsg-replace="true"></span>
                         </div>
                         <div className="form-group">
-                            <a href="auth-recoverpw-2.php" className="text-muted float-right"><small>Forgot your password?</small></a>
+                            <Link to="auth-recoverpw-2.php" className="text-muted float-right"><small>Forgot your password?</small></Link>
                             <label htmlFor="Password">Password</label>
                             <div className="input-group input-group-merge">
                                 <input type="password" name="Password" id="Password" className="form-control " defaultValue="" placeholder="Enter your password"/>
@@ -59,13 +59,13 @@ function AuthRegistration(){
                                     </div>
                                 </div>
 
-                                <span className="field-validation-valid text-danger" data-valmsg-htmlfor="Password" data-valmsg-replace="true"></span>
+                                <span className="field-validation-valid text-danger" data-valmsg-htmlhtmlFor="Password" data-valmsg-replace="true"></span>
                             </div>
                         </div>
                         <div className="form-group">
                             <div className="custom-control custom-checkbox">
                                 <input type="checkbox" name="terms" className="custom-control-input" id="checkbox-signup"/>
-                                <label className="custom-control-label" htmlFor="checkbox-signup">I accept <a href="#" className="text-dark">Terms and Conditions</a></label>
+                                <label className="custom-control-label" htmlFor="checkbox-signup">I accept <Link to="#" className="text-dark">Terms and Conditions</Link></label>
                             </div>
                         </div>
                         <div className="form-group mb-0 text-center">
@@ -77,7 +77,7 @@ function AuthRegistration(){
                     {/* end form*/}
                     {/* Footer*/}
                     <footer className="footer footer-alt">
-                        <p className="text-muted">Already have account? <a href="/Auth/Login" className="text-muted ml-1"><b>Log In</b></a></p>
+                        <p className="text-muted">Already have account? <Link to="/Auth/Login" className="text-muted ml-1"><b>Log In</b></Link></p>
                     </footer>
 
                 </div> {/* end .card-body */}

@@ -3,6 +3,7 @@ import LeftSideBar from "../LeftSidebar";
 import RightSidebar from "../RightSidebar";
 import TopBar from "../TopBar";
 import BreadcrumbNav from "../BreadcrumbNav";
+import { Link } from "react-router-dom";
 function TemplateView() {
     return (
         <>
@@ -54,8 +55,8 @@ function TemplateView() {
 
 
                                     <td>
-                                        <a href="/Template/Edit/2" className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></a>
-                                        <a href="/Template/Delete/2" className="action-icon"> <i className="mdi mdi-delete"></i></a>
+                                        <Link to="/Template/Edit/2" className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></Link>
+                                        <Link to="/Template/Delete/2" className="action-icon"> <i className="mdi mdi-delete"></i></Link>
                                     </td>
                                 </tr>
                                 <tr>
@@ -73,8 +74,8 @@ function TemplateView() {
 
 
                                     <td>
-                                        <a href="/Template/Edit/14" className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></a>
-                                        <a href="/Template/Delete/14" className="action-icon"> <i className="mdi mdi-delete"></i></a>
+                                        <Link to="/Template/Edit/14" className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></Link>
+                                        <Link to="/Template/Delete/14" className="action-icon"> <i className="mdi mdi-delete"></i></Link>
                                     </td>
                                 </tr>
 

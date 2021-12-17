@@ -1,6 +1,6 @@
 import Footer from "../Footer";
 import React, { Component } from "react";
-
+import { Link } from "react-router-dom";
 class Contact extends Component {
     constructor() {
         super()
@@ -37,12 +37,12 @@ class Contact extends Component {
                                                     </div>
                                                 </div>
                                             </div>
-                                            <a href="#" className="btn btn-blue btn-sm ml-2">
+                                            <Link to="#" className="btn btn-blue btn-sm ml-2">
                                                 <i className="mdi mdi-autorenew"></i>
-                                            </a>
-                                            <a href="#" className="btn btn-blue btn-sm ml-1">
+                                            </Link>
+                                            <Link to="#" className="btn btn-blue btn-sm ml-1">
                                                 <i className="mdi mdi-filter-variant"></i>
-                                            </a>
+                                            </Link>
                                         </form>
                                     </div>
                                     <h4 className="page-title"> {this.state.message} </h4>
