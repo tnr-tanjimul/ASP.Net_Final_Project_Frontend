@@ -130,7 +130,7 @@ function TopBar(){
 						
 			            <li className="dropdown notification-list topbar-dropdown">
 			                <Link className="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light" data-toggle="dropdown" to="#" role="button" aria-haspopup="false" aria-expanded="false">
-			                    <img src="assets/images/users/user-5.jpg" alt="user-image" className="rounded-circle"/>
+			                    <img src="/assets/images/users/user-5.jpg" alt="user_img" className="rounded-circle"/>
 			                    <span className="pro-user-name ml-1">
 									Tanjimul Islam  
 									<i className="mdi mdi-chevron-down"></i>
@@ -183,21 +183,21 @@ function TopBar(){
 			        <div className="logo-box">
 			            <Link to="/" className="logo logo-dark text-center">
 			                <span className="logo-sm">
-			                    <img src="assets/images/logo-sm.png" alt="" height="22"/>
+			                    <img src="/assets/images/logo-sm.png" alt="" height="22"/>
 			                    {/* <span className="logo-lg-text-light">UBold</span> */}
 							</span>
 			                <span className="logo-lg">
-			                    <img src="assets/images/logo-dark.png" alt="" height="20"/>
+			                    <img src="/assets/images/logo-dark.png" alt="" height="20"/>
 			                    {/* <span className="logo-lg-text-light">U</span> */}
 							</span>
 						</Link>
 						
 			            <Link to="/" className="logo logo-light text-center">
 			                <span className="logo-sm">
-			                    <img src="assets/images/logo-sm.png" alt="" height="22"/>
+			                    <img src="/assets/images/logo-sm.png" alt="" height="22"/>
 							</span>
 			                <span className="logo-lg">
-			                    <img src="assets/images/logo-light.png" alt="" height="28"/>
+			                    <img src="/assets/images/logo-light.png" alt="" height="28"/>
 							</span>
 						</Link>
 					</div>

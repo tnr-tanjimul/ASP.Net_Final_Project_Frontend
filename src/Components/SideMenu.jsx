@@ -19,11 +19,11 @@ function SideMenu() {
                 </li>
 
                 <li>
-                    <Link to="#h_group" data-toggle="collapse">
+                    <a href="#h_group" data-toggle="collapse">
                         <i className="mdi mdi-bullseye"></i>
                         <span> Group </span>
                         <span className="menu-arrow"></span>
-                    </Link>
+                    </a>
                     <div className="collapse" id="h_group">
                         <ul className="nav-second-level">
                             <li> <Link to="/group">View</Link> </li>
@@ -36,11 +36,11 @@ function SideMenu() {
 
 
                 <li>
-                    <Link to="#h_contact" data-toggle="collapse">
+                    <a href="#h_contact" data-toggle="collapse">
                         <i className="mdi mdi-account-multiple-outline"></i>
                         <span> Contact </span>
                         <span className="menu-arrow"></span>
-                    </Link>
+                    </a>
                     <div className="collapse" id="h_contact">
                         <ul className="nav-second-level">
                             <li> <Link to="/contact">View</Link> </li>
@@ -53,11 +53,11 @@ function SideMenu() {
 
 
                 <li>
-                    <Link to="#h_template" data-toggle="collapse">
+                    <a href="#h_template" data-toggle="collapse">
                         <i className="mdi mdi-view-dashboard-outline"></i>
                         <span> Template </span>
                         <span className="menu-arrow"></span>
-                    </Link>
+                    </a>
                     <div className="collapse" id="h_template">
                         <ul className="nav-second-level">
                         <li> <Link to="/template">View</Link> </li>
@@ -69,24 +69,24 @@ function SideMenu() {
                 </li>
 
 
-                <li className="menuitem-active">
-                    <Link to="/sender" className="active">
+                <li>
+                    <Link to="/sender">
                         <i className="fe-message-square mr-1"></i>
                         <span> Sender </span>
                     </Link>
                 </li>
 
 
-                <li className="menuitem-active">
-                    <Link to="/bulksender" className="active">
+                <li>
+                    <Link to="/bulksender">
                         <i className="mdi mdi-ballot-recount mr-1"></i>
                         <span> Bulk Sender </span>
                     </Link>
                 </li>
 
 
-                <li className="menuitem-active">
-                    <Link to="/messages" className="active">
+                <li>
+                    <Link to="/messages">
                         <i className="fe-bar-chart-line mr-1"></i>
                         <span> Messeges </span>
                     </Link>
@@ -94,11 +94,11 @@ function SideMenu() {
 
 
                 <li>
-                    <Link to="#h_user" data-toggle="collapse">
+                    <a href="#h_user" data-toggle="collapse">
                         <i className="mdi mdi-account-convert"></i>
                         <span> User </span>
                         <span className="menu-arrow"></span>
-                    </Link>
+                    </a>
                     <div className="collapse" id="h_user">
                         <ul className="nav-second-level">
                             <li> <Link to="/user">View</Link> </li>
@@ -111,11 +111,11 @@ function SideMenu() {
 
 
                 <li>
-                    <Link to="#h_SenderNumber" data-toggle="collapse">
+                    <a href="#h_SenderNumber" data-toggle="collapse">
                         <i className="fa fa-server"></i>
                         <span> SenderNumber </span>
                         <span className="menu-arrow"></span>
-                    </Link>
+                    </a>
                     <div className="collapse" id="h_SenderNumber">
                         <ul className="nav-second-level">
                             <li> <Link to="/sender-number">View</Link> </li>
@@ -127,7 +127,7 @@ function SideMenu() {
                 </li>
 
 
-                <li className="menuitem-active">
+                <li>
                     <Link to="/admin" className="active">
                         <i className="fe-message-square mr-1"></i>
                         <span> Admin </span>
