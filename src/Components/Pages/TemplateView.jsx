@@ -4,7 +4,29 @@ import RightSidebar from "../RightSidebar";
 import TopBar from "../TopBar";
 import BreadcrumbNav from "../BreadcrumbNav";
 import { Link } from "react-router-dom";
-function TemplateView() {
+
+
+
+
+
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+
+
+
+const TemplateView = (props) => {
+    const [apiData, setApidata] = useState([]);
+
+    useEffect(() => {
+        axios.get("template/all")
+            .then(resp => {
+                console.log(resp.data);
+                setApidata(resp.data);
+            }).catch(err => {
+                console.log(err);
+            });
+    }, []);
+
     return (
         <>
             <div id="wrapper">
@@ -40,44 +62,28 @@ function TemplateView() {
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                        <tr>
+                                                        {
+                                                            apiData.map(p => (
+                                                                <tr key={p.id}>
 
-                                                            <td className="table-user">
+                                                                    <td className="table-user">{p.Id.toString().trim()}</td>
+                                                                    
+                                                                    <td>{p.Name.trim()}</td>
+                                                                    
 
-                                                                2
-                                                            </td>
-                                                            <td>tan                                                                                                 </td>
-                                                            <td>
-                                                                csfdgdgsg
-                                                            </td>
-
-
+                                                                    <td>{p.Message.trim()}</td>
 
 
-                                                            <td>
-                                                                <Link to="/Template/Edit/2" className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></Link>
-                                                                <Link to="/Template/Delete/2" className="action-icon"> <i className="mdi mdi-delete"></i></Link>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
+                                                                    <td>
+                                                                        <Link to={"/template/edit/"+ p.Id +""} className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></Link>
+                                                                        <Link to={"/template/delete/"+ p.Id +""} className="action-icon"> <i className="mdi mdi-delete"></i></Link>
+                                                                    </td>
+                                                                </tr>
 
-                                                            <td className="table-user">
-
-                                                                14
-                                                            </td>
-                                                            <td>CseBatch                                                                                            </td>
-                                                            <td>
-                                                                jugvuih
-                                                            </td>
+                                                            ))
+                                                        }
 
 
-
-
-                                                            <td>
-                                                                <Link to="/Template/Edit/14" className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></Link>
-                                                                <Link to="/Template/Delete/14" className="action-icon"> <i className="mdi mdi-delete"></i></Link>
-                                                            </td>
-                                                        </tr>
 
                                                     </tbody>
                                                 </table>
