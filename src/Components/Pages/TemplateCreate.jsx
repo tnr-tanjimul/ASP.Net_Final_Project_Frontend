@@ -1,10 +1,51 @@
-import BreadcrumbNav from "../BreadcrumbNav";
 import Footer from "../Footer";
 import LeftSideBar from "../LeftSidebar";
 import RightSidebar from "../RightSidebar";
 import TopBar from "../TopBar";
+import BreadcrumbNav from "../BreadcrumbNav";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import  { Redirect } from 'react-router-dom';
+import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
-function TemplateCreate() {
+const TemplateCreate = (props) => {
+
+    var UserId = null;
+    if (localStorage.getItem('user')) {
+        var obj = JSON.parse(localStorage.getItem('user'));
+        UserId = obj.UserId;
+    }
+
+    let [name, setName] = useState("");
+    let [message, setMessage] = useState("");
+
+    
+
+    let history = useHistory();
+    function handleRedirect() {
+        history.push("/template");
+    }
+
+
+    const AddSubmit= ()=>{
+          var obj = {UserId: UserId, Name: name, Message: message};
+          axios.post("template/add",obj)
+          .then(resp=>{
+              var data = resp.data;
+              alert(data.Message);
+              console.log(data);
+              handleRedirect();
+              
+              
+          }).catch(err=>{
+              console.log(err);
+          });
+          
+         
+    }
+    
+
+
     return (
         <>
             <div id="wrapper">
@@ -20,7 +61,7 @@ function TemplateCreate() {
 
                             <BreadcrumbNav page="Template" title="Create"></BreadcrumbNav>
 
-                            <form action="/Template/Create" method="post">
+                            <div>
 
                                 <input name="__RequestVerificationToken" type="hidden" defaultValue="HrOs0oHo1hWU4oBZfvLTRJTATqkFMvXwxQ1Jdf2U4tTp3Rlayc2Ni3wjkUm6MulAE-zAoXwpoIs7LaQH3hai9_CJ7jHA7Q22QgKhwUpXdI39_2B5Nc4zbulMFOYaNH3z0" />
                                 <div className="row">
@@ -38,21 +79,23 @@ function TemplateCreate() {
 
                                             <div className="form-group mb-3">
                                                 <label htmlFor="product-meta-keywords">Name</label>
-                                                <input type="text" className="form-control" name="Name" id="Name" placeholder="" />
+                                                <input value={name} onChange={(e)=>setName(e.target.value)} type="text" className="form-control" name="Name" id="Name" placeholder="" />
                                                 <span className="field-validation-valid text-danger" data-valmsg-htmlhtmlFor="Name" data-valmsg-replace="true"></span>
                                             </div>
 
 
                                             <div className="form-group mb-3">
                                                 <label htmlFor="messageInput">Message</label>
-                                                <textarea name="message" className="form-control" rows="5" id="messageInput" data-counter="#smsCounter" placeholder="Please enter description"></textarea>
+                                                <textarea name="message" onChange={(e)=>setMessage(e.target.value)} className="form-control" rows="5" id="messageInput" data-counter="#smsCounter" placeholder="Please enter description">
+                                                    {message}
+                                                </textarea>
                                                 <span className="field-validation-valid text-danger" data-valmsg-htmlhtmlFor="Message" data-valmsg-replace="true"></span>
                                             </div>
 
 
                                             <div className="text-center mb-3">
-                                                <Link to="/Template/Index" type="button" className="btn w-sm btn-light waves-effect">Cancel</Link>
-                                                <button type="submit" className="btn w-sm btn-success waves-effect waves-light">Save</button>
+                                                <Link to="/template" type="button" className="btn w-sm btn-light waves-effect">Cancel</Link>
+                                                <button type="submit" onClick={AddSubmit} className="btn w-sm btn-success waves-effect waves-light">Save</button>
 
                                             </div>
 
@@ -65,7 +108,7 @@ function TemplateCreate() {
                                 </div>
 
 
-                            </form>
+                            </div>
 
                             {/* end row*/}
                         </div>

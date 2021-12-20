@@ -11,14 +11,24 @@ import { Link } from "react-router-dom";
 
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import FetchUserId from "./FetchUserId";
 
 
 
 const TemplateView = (props) => {
     const [apiData, setApidata] = useState([]);
 
+
+    var UserId = null;
+    if (localStorage.getItem('user')) {
+        var obj = JSON.parse(localStorage.getItem('user'));
+        UserId = obj.UserId;
+    }
+
     useEffect(() => {
-        axios.get("template/all")
+        var url = "template/get?UserId="+UserId;
+        //alert(url);
+        axios.get(url)
             .then(resp => {
                 console.log(resp.data);
                 setApidata(resp.data);
@@ -67,16 +77,16 @@ const TemplateView = (props) => {
                                                                 <tr key={p.id}>
 
                                                                     <td className="table-user">{p.Id.toString().trim()}</td>
-                                                                    
+
                                                                     <td>{p.Name.trim()}</td>
-                                                                    
+
 
                                                                     <td>{p.Message.trim()}</td>
 
 
                                                                     <td>
-                                                                        <Link to={"/template/edit/"+ p.Id +""} className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></Link>
-                                                                        <Link to={"/template/delete/"+ p.Id +""} className="action-icon"> <i className="mdi mdi-delete"></i></Link>
+                                                                        <Link to={"/template/edit/" + p.Id + ""} className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></Link>
+                                                                        <Link to={"/template/delete/" + p.Id + ""} className="action-icon"> <i className="mdi mdi-delete"></i></Link>
                                                                     </td>
                                                                 </tr>
 

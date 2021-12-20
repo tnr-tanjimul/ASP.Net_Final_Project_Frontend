@@ -4,6 +4,7 @@ import RightSidebar from "../RightSidebar";
 import TopBar from "../TopBar";
 import DashItem from "./DashItem";
 import { Link } from "react-router-dom";
+import IsLoggegIn from "../IsLoggegIn";
 
 function Dashboard() {
     return (
