@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 function Dashboard() {
     return (
     <>
+    
     <div id="wrapper">
         <TopBar></TopBar>
         <LeftSideBar></LeftSideBar>
@@ -53,7 +54,7 @@ function Dashboard() {
                         <DashItem classColor="info" icon="fe-message-square" text="Total Messages" count="17"></DashItem>
                         <DashItem classColor="success" icon="fe-message-square" text="Success" count="9"></DashItem>
                         <DashItem classColor="warning" icon="fe-message-square" text="Failed" count="8"></DashItem>
-                        <DashItem classColor="success" icon="fe-heart" text="Balance" count="170"></DashItem>
+                        <DashItem classColor="success" icon="fe-heart" text="Credit" count="170"></DashItem>
                         <DashItem classColor="pink" icon="fe-bar-chart-line" text="Groups" count="6"></DashItem>
                         <DashItem classColor="info" icon="mdi mdi-view-dashboard-outline" text="Templates" count="2"></DashItem>
                         
