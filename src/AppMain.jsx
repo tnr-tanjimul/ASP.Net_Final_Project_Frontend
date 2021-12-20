@@ -20,6 +20,7 @@ import UserCreate from "./Components/Pages/UserCreate";
 import SenderNumberView from "./Components/Pages/SenderNumberView";
 import SenderNumberCreate from "./Components/Pages/SenderNumberCreate";
 import TemplateRemove from './Components/Pages/TemplateRemove';
+import SenderNumberRemove from './Components/Pages/SenderNumberRemove';
 function AppMain() {
     return (
         <Router>
@@ -93,6 +94,14 @@ function AppMain() {
                     </Route>
                     <Route exact path="/sender-number/create">
                         <SenderNumberCreate></SenderNumberCreate>
+                    </Route>
+
+                    <Route exact path="/sender-number/edit/:id">
+                        <TemplateView></TemplateView>
+                    </Route>
+
+                    <Route exact path="/sender-number/delete/:id">
+                       <SenderNumberRemove></SenderNumberRemove>
                     </Route>
 
 

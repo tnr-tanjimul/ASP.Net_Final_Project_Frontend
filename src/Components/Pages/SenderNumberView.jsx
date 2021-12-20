@@ -4,7 +4,29 @@ import RightSidebar from "../RightSidebar";
 import TopBar from "../TopBar";
 import BreadcrumbNav from "../BreadcrumbNav";
 import { Link } from "react-router-dom";
-function SenderNumberView() {
+
+
+
+
+
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+
+
+
+const SenderNumberView = (props) => {
+    const [apiData, setApidata] = useState([]);
+
+    useEffect(() => {
+        axios.get("Sendernumber/all")
+            .then(resp => {
+                console.log(resp.data);
+                setApidata(resp.data);
+            }).catch(err => {
+                console.log(err);
+            });
+    }, []);
+
     return (
         <>
             <div id="wrapper">
@@ -18,8 +40,7 @@ function SenderNumberView() {
 
                             {/* start page title */}
 
-                            <BreadcrumbNav page="User" title="View"></BreadcrumbNav>
-
+                            <BreadcrumbNav page="Template" title="View"></BreadcrumbNav>
                             <div className="row">
                                 <div className="col-12">
                                     <div className="card">
@@ -33,71 +54,56 @@ function SenderNumberView() {
                                                             <th>ID</th>
                                                             <th>Number</th>
                                                             <th>Device ID</th>
+
                                                             <th>ApiToken</th>
 
 
-
-                                                            <th style={{width: "75px"}}>Action</th>
+                                                            <th style={{ width: "75px" }}>Action</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                        <tr>
+                                                        {
+                                                            apiData.map(p => (
+                                                                <tr key={p.id}>
 
-                                                            <td className="table-user">
+                                                                    <td className="table-user">{p.Id.toString().trim()}</td>
+                                                                    
+                                                                    <td>{p.Number.trim()}</td>
+                                                                    
 
-                                                                1
-                                                            </td>
-                                                            <td>+8801833245245</td>
-                                                            <td>
-                                                                1110|0
-                                                            </td>
-                                                            <td>
-                                                                441ed028b1f065c1f39e6a31386af823dbb2f476
-                                                            </td>
+                                                                    <td>{p.DeviceId.trim()}</td>
 
+                                                                    <td>{p.ApiToken.trim()}</td>
 
-
-                                                            <td>
-                                                                <a href="/SenderNumber/Edit/1" className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></a>
-                                                                <a href="/SenderNumber/Delete/1" className="action-icon"> <i className="mdi mdi-delete"></i></a>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-
-                                                            <td className="table-user">
-
-                                                                2
-                                                            </td>
-                                                            <td>+8801844784850</td>
-                                                            <td>
-                                                                1110|1
-                                                            </td>
-                                                            <td>
-                                                                441ed028b1f065c1f39e6a31386af823dbb2f476
-                                                            </td>
+                                                                    
 
 
+                                                                    <td>
+                                                                        <Link to={"/sender-number/edit/"+ p.Id +""} className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></Link>
+                                                                        <Link to={"/sender-number/delete/"+ p.Id +""} className="action-icon"> <i className="mdi mdi-delete"></i></Link>
+                                                                    </td>
+                                                                </tr>
 
-                                                            <td>
-                                                                <a href="/SenderNumber/Edit/2" className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></a>
-                                                                <a href="/SenderNumber/Delete/2" className="action-icon"> <i className="mdi mdi-delete"></i></a>
-                                                            </td>
-                                                        </tr>
+                                                            ))
+                                                        }
+
+
 
                                                     </tbody>
                                                 </table>
                                             </div>
-                                        </div> 
-                                    </div> 
-                                </div> 
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
 
-
+                            {/* end row*/}
                         </div>
                     </div>
-
+                    {/* content */}
+                    {/* Footer Start */}
                     <Footer></Footer>
-
+                    {/* end Footer */}
 
 
                 </div>
