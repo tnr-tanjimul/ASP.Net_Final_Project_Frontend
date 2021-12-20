@@ -5,6 +5,18 @@ import ReactDOM from 'react-dom';
 import AppMain from './AppMain';
 import reportWebVitals from './reportWebVitals';
 
+
+import axios from 'axios';
+
+var token = null;
+if(localStorage.getItem('user')){
+  var obj = JSON.parse(localStorage.getItem('user'));
+  token = obj.access_token;
+}
+axios.defaults.baseURL="https://localhost:44390/api/"; //local Server
+//axios.defaults.baseURL="http://apwt.tnrsoft.com/api/"; // live Server
+axios.defaults.headers.common["Authorization"] = token;
+
 ReactDOM.render(
   <React.StrictMode>
     <AppMain/>
