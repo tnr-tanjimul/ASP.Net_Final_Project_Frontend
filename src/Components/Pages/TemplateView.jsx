@@ -60,7 +60,7 @@ const TemplateView = (props) => {
                                             <div className="table-responsive">
                                                 <table className="table table-centered table-striped dt-responsive nowrap w-100" id="products-datatable">
                                                     <thead>
-                                                        <tr>
+                                                        <tr key="999999">
                                                             <th>ID</th>
                                                             <th>Name</th>
                                                             <th>Message</th>
@@ -73,15 +73,15 @@ const TemplateView = (props) => {
                                                     </thead>
                                                     <tbody>
                                                         {
-                                                            apiData.map(p => (
-                                                                <tr key={p.id}>
+                                                            apiData.map((p, index) => (
+                                                                <tr key={index}>
 
-                                                                    <td className="table-user">{p.Id.toString().trim()}</td>
+                                                                    <td className="table-user">{p.Id}</td>
 
-                                                                    <td>{p.Name.trim()}</td>
+                                                                    <td>{p.Name}</td>
 
 
-                                                                    <td>{p.Message.trim()}</td>
+                                                                    <td>{p.Message}</td>
 
 
                                                                     <td>
@@ -119,7 +119,7 @@ const TemplateView = (props) => {
             <div className="rightbar-overlay"></div>
         </>
 
-    );
+    )
 }
 
 export default TemplateView;

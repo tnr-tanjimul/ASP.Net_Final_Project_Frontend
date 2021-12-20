@@ -4,7 +4,39 @@ import RightSidebar from "../RightSidebar";
 import TopBar from "../TopBar";
 import BreadcrumbNav from "../BreadcrumbNav";
 import { Link } from "react-router-dom";
-function GroupView() {
+
+
+
+
+
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import FetchUserId from "./FetchUserId";
+
+
+
+const GroupView = (props) => {
+    const [apiData, setApidata] = useState([]);
+
+
+    var UserId = null;
+    if (localStorage.getItem('user')) {
+        var obj = JSON.parse(localStorage.getItem('user'));
+        UserId = obj.UserId;
+    }
+
+    useEffect(() => {
+        var url = "group/get?UserId="+UserId;
+        //alert(url);
+        axios.get(url)
+            .then(resp => {
+                console.log(resp.data);
+                setApidata(resp.data);
+            }).catch(err => {
+                console.log(err);
+            });
+    }, []);
+
     return (
         <>
             <div id="wrapper">
@@ -19,7 +51,6 @@ function GroupView() {
                             {/* start page title */}
 
                             <BreadcrumbNav page="Group" title="View"></BreadcrumbNav>
-
                             <div className="row">
                                 <div className="col-12">
                                     <div className="card">
@@ -29,125 +60,40 @@ function GroupView() {
                                             <div className="table-responsive">
                                                 <table className="table table-centered table-striped dt-responsive nowrap w-100" id="products-datatable">
                                                     <thead>
-                                                        <tr>
+                                                        <tr key="999999">
                                                             <th>ID</th>
                                                             <th>Name</th>
+                                                           
+
+
+
+
                                                             <th style={{ width: "75px" }}>Action</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                        <tr>
+                                                        {
+                                                            apiData.map((p, index) => (
+                                                                <tr key={index}>
 
-                                                            <td className="table-user">
+                                                                    <td className="table-user"> {p.Id} </td>
 
-                                                                1
-                                                            </td>
-                                                            <td>Tanjimul1                                                                                           </td>
-
-
+                                                                    <td>{p.Name}</td>
 
 
-                                                            <td>
-                                                                <Link to="/Group/Edit/1" className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></Link>
-                                                                <Link to="/Group/Delete/1" className="action-icon"> <i className="mdi mdi-delete"></i></Link>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-
-                                                            <td className="table-user">
-
-                                                                3
-                                                            </td>
-                                                            <td>ytesdyvhbj                                                                                          </td>
+                                                                   
 
 
+                                                                    <td>
+                                                                        <Link to={"/group/edit/" + p.Id + ""} className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></Link>
+                                                                        <Link to={"/group/delete/" + p.Id + ""} className="action-icon"> <i className="mdi mdi-delete"></i></Link>
+                                                                    </td>
+                                                                </tr>
+
+                                                            ))
+                                                        }
 
 
-                                                            <td>
-                                                                <Link to="/Group/Edit/3" className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></Link>
-                                                                <Link to="/Group/Delete/3" className="action-icon"> <i className="mdi mdi-delete"></i></Link>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-
-                                                            <td className="table-user">
-
-                                                                4
-                                                            </td>
-                                                            <td>xdgdgdgd                                                                                            </td>
-
-
-
-
-                                                            <td>
-                                                                <Link to="/Group/Edit/4" className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></Link>
-                                                                <Link to="/Group/Delete/4" className="action-icon"> <i className="mdi mdi-delete"></i></Link>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-
-                                                            <td className="table-user">
-
-                                                                7
-                                                            </td>
-                                                            <td>22222                                                                                               </td>
-
-
-
-
-                                                            <td>
-                                                                <Link to="/Group/Edit/7" className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></Link>
-                                                                <Link to="/Group/Delete/7" className="action-icon"> <i className="mdi mdi-delete"></i></Link>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-
-                                                            <td className="table-user">
-
-                                                                17
-                                                            </td>
-                                                            <td>tan                                                                                                 </td>
-
-
-
-
-                                                            <td>
-                                                                <Link to="/Group/Edit/17" className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></Link>
-                                                                <Link to="/Group/Delete/17" className="action-icon"> <i className="mdi mdi-delete"></i></Link>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-
-                                                            <td className="table-user">
-
-                                                                25
-                                                            </td>
-                                                            <td>asp.net                                                                                             </td>
-
-
-
-
-                                                            <td>
-                                                                <Link to="/Group/Edit/25" className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></Link>
-                                                                <Link to="/Group/Delete/25" className="action-icon"> <i className="mdi mdi-delete"></i></Link>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-
-                                                            <td className="table-user">
-
-                                                                27
-                                                            </td>
-                                                            <td>Tanj                                                                                                </td>
-
-
-
-
-                                                            <td>
-                                                                <Link to="/Group/Edit/27" className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></Link>
-                                                                <Link to="/Group/Delete/27" className="action-icon"> <i className="mdi mdi-delete"></i></Link>
-                                                            </td>
-                                                        </tr>
 
                                                     </tbody>
                                                 </table>
@@ -157,12 +103,13 @@ function GroupView() {
                                 </div>
                             </div>
 
-
+                            {/* end row*/}
                         </div>
                     </div>
-
+                    {/* content */}
+                    {/* Footer Start */}
                     <Footer></Footer>
-
+                    {/* end Footer */}
 
 
                 </div>
@@ -172,7 +119,7 @@ function GroupView() {
             <div className="rightbar-overlay"></div>
         </>
 
-    );
+    )
 }
 
 export default GroupView;

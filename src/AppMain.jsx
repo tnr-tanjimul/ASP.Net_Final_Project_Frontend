@@ -21,6 +21,7 @@ import SenderNumberView from "./Components/Pages/SenderNumberView";
 import SenderNumberCreate from "./Components/Pages/SenderNumberCreate";
 import Logout from './Components/Pages/Logout';
 import TemplateRemove from './Components/Pages/TemplateRemove';
+import MessageRemove from './Components/Pages/MessageRemove';
 function AppMain() {
     return (
         <Router>
@@ -69,6 +70,10 @@ function AppMain() {
 
                     <Route exact path="/messages">
                         <MessagesView></MessagesView>
+                    </Route>
+
+                    <Route exact path="/message/delete/:id">
+                        <MessageRemove></MessageRemove>
                     </Route>
 
 

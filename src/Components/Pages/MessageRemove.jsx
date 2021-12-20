@@ -4,12 +4,12 @@ import {useState, useEffect} from "react";
 import axios from "axios";
 import  { Redirect } from 'react-router-dom';
 
-const TemplateRemove = (props) => {
+const MessageRemove = (props) => {
     const {id} = useParams();
     const [apiData, setApidata] = useState([]);
 
     useEffect(  () => {
-        const url = "template/delete?id="+id;
+        const url = "message/delete?id="+id;
         axios.get(url)
             .then(resp => {
                 console.log(resp.data);
@@ -22,7 +22,7 @@ const TemplateRemove = (props) => {
     }, []);
 
 
-    return <Redirect to='/template'/>
+    return <Redirect to='/messages'/>
 
 }
-export default TemplateRemove;
+export default MessageRemove;

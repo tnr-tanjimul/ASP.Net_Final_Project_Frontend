@@ -25,7 +25,7 @@ const TemplateCreate = (props) => {
     let [name, setName] = useState("");
     let [message, setMessage] = useState("");
 
-    const onSubmit = async () => {
+    const onSubmit = () => {
         if (name === "" && message === "") {
             setError("Name & Message Required");
         } else if (name === "") {
