@@ -19,6 +19,7 @@ import UserView from "./Components/Pages/UserView";
 import UserCreate from "./Components/Pages/UserCreate";
 import SenderNumberView from "./Components/Pages/SenderNumberView";
 import SenderNumberCreate from "./Components/Pages/SenderNumberCreate";
+import Logout from './Components/Pages/Logout';
 function AppMain() {
     return (
         <Router>
@@ -103,6 +104,13 @@ function AppMain() {
                         <Route exact path="/login">
                             <AuthLogin></AuthLogin>
                         </Route>
+
+
+                        <Route exact path="/logout">
+                            <Logout></Logout>
+                        </Route>
+
+
 
 
                         <Route exact path="/register">
