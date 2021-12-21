@@ -76,7 +76,7 @@ const TemplateView = (props) => {
                                                             apiData.map((p, index) => (
                                                                 <tr key={index}>
 
-                                                                    <td className="table-user">{p.Id}</td>
+                                                                    <td className="table-user"> {p.Id} </td>
 
                                                                     <td>{p.Name}</td>
 

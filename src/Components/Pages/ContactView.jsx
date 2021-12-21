@@ -4,7 +4,39 @@ import RightSidebar from "../RightSidebar";
 import TopBar from "../TopBar";
 import BreadcrumbNav from "../BreadcrumbNav";
 import { Link } from "react-router-dom";
-function ContactView() {
+
+
+
+
+
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import FetchUserId from "./FetchUserId";
+
+
+
+const ContactView = (props) => {
+    const [apiData, setApidata] = useState([]);
+
+
+    var UserId = null;
+    if (localStorage.getItem('user')) {
+        var obj = JSON.parse(localStorage.getItem('user'));
+        UserId = obj.UserId;
+    }
+
+    useEffect(() => {
+        var url = "contact/get?UserId=" + UserId;
+        //alert(url);
+        axios.get(url)
+            .then(resp => {
+                console.log(resp.data);
+                setApidata(resp.data);
+            }).catch(err => {
+                console.log(err);
+            });
+    }, []);
+
     return (
         <>
             <div id="wrapper">
@@ -19,7 +51,6 @@ function ContactView() {
                             {/* start page title */}
 
                             <BreadcrumbNav page="Contact" title="View"></BreadcrumbNav>
-
                             <div className="row">
                                 <div className="col-12">
                                     <div className="card">
@@ -29,39 +60,41 @@ function ContactView() {
                                             <div className="table-responsive">
                                                 <table className="table table-centered table-striped dt-responsive nowrap w-100" id="products-datatable">
                                                     <thead>
-                                                        <tr>
-
+                                                        <tr key="999999">
                                                             <th>ID</th>
                                                             <th>Group</th>
-                                                            <th>Number</th>
                                                             <th>Name</th>
+                                                            <th>Number</th>
+
+
 
 
                                                             <th style={{ width: "75px" }}>Action</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                        <tr>
+                                                        {
+                                                            apiData.map((p, index) => (
+                                                                <tr key={index}>
 
-                                                            <td className="table-user">
+                                                                    <td className="table-user">{p.Id}</td>
 
-                                                                22
-                                                            </td>
-                                                            <td>Tanjimul1                                                                                           </td>
-                                                            <td>
-                                                                01792426831
-                                                            </td>
-                                                            <td>
-                                                                testGroup
-                                                            </td>
+                                                                    <td>{p.GroupId}</td>
+
+                                                                    <td>{p.Name}</td>
+
+                                                                    <td>{p.Number}</td>
+
+                                                                    <td>
+                                                                        <Link to={"/contact/edit/" + p.Id + ""} className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></Link>
+                                                                        <Link to={"/contact/delete/" + p.Id + ""} className="action-icon"> <i className="mdi mdi-delete"></i></Link>
+                                                                    </td>
+                                                                </tr>
+
+                                                            ))
+                                                        }
 
 
-
-                                                            <td>
-                                                                <Link to="/Contact/Edit/22" className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></Link>
-                                                                <Link to="/Contact/Delete/22" className="action-icon"> <i className="mdi mdi-delete"></i></Link>
-                                                            </td>
-                                                        </tr>
 
                                                     </tbody>
                                                 </table>
@@ -71,12 +104,13 @@ function ContactView() {
                                 </div>
                             </div>
 
-
+                            {/* end row*/}
                         </div>
                     </div>
-
+                    {/* content */}
+                    {/* Footer Start */}
                     <Footer></Footer>
-
+                    {/* end Footer */}
 
 
                 </div>
@@ -86,7 +120,7 @@ function ContactView() {
             <div className="rightbar-overlay"></div>
         </>
 
-    );
+    )
 }
 
 export default ContactView;
