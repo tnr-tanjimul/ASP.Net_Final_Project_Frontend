@@ -38,9 +38,9 @@ const SenderNumberCreate = (props) => {
             setError("ApiToken Required");
         }
         else {
-            setApiToken(null);
-            setDeviceId(null);
-            setNumber(null);
+            setApiToken("");
+            setDeviceId("");
+            setNumber("");
             setError("");
             onProcess();
             setSuccess("Sender Number Create Successfully");
