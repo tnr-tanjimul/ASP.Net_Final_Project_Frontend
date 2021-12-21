@@ -84,7 +84,7 @@ const ApiKeyView = (props) => {
                                                                     <td>{p.Counter}</td>
                                                                     <td>{p.CreatedAt}</td>
                                                                     <td>
-                                                                        <Link to={"/template/delete/" + p.Id + ""} className="action-icon"> <i className="mdi mdi-delete"></i></Link>
+                                                                        <Link to={"/apikey/delete/" + p.Id + ""} className="action-icon"> <i className="mdi mdi-delete"></i></Link>
                                                                     </td>
                                                                 </tr>
 

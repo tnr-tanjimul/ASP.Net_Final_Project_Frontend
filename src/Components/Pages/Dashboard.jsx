@@ -7,49 +7,8 @@ import { Link } from "react-router-dom";
 import IsLoggegIn from "../IsLoggegIn";
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-export const Dashboard = () => {
-    const [apiData, setApidata] = useState([]);
-    const [SendMessages, setSendMessages] = useState("");
-    const [FailedMessages, setFailedMessages] = useState("");
-    const [SuccessMessages, setSuccessMessages] = useState("");
-    const [Credit, setCredit] = useState("");
-    const [Users, setUsers] = useState("");
-    const [Groups, setGroups] = useState("");
-    const [Templates, setTemplates] = useState("");
-    const [ApiKeys, setApiKeys] = useState("");
-    const [Payemnts, setPayemnts] = useState("");
-
-    var UserId = null;
-    if (localStorage.getItem('user')) {
-        var obj = JSON.parse(localStorage.getItem('user'));
-        UserId = obj.UserId;
-        await TuseEffect();
-    }
-   //alert(UserId);
-
-    async TuseEffect(() => {
-          const url = "dashboard/get?UserId=" + UserId;
-          axios.get(url)
-                .then(resp => {
-                     // console.log(resp.data);
-                      setApidata(resp.data);
-                      
-                      setSendMessages(apiData.SendMessages);
-
-                      
-                      setFailedMessages(apiData.FailedMessages);
-                      setSuccessMessages(apiData.SuccessMessages);
-                      setCredit(apiData.Credit);
-                      setUsers(apiData.Users);
-                      setGroups(apiData.Groups);
-                      setTemplates(apiData.Templates);
-                      setApiKeys(apiData.ApiKeys);
-                      setPayemnts(apiData.Payemnts);
-                      
-                }).catch(err => {
-                      console.log(err);
-                });
-    }, []);
+import DashboardStatus from "./DashboardStatus";
+function Dashboard(){
     return (
     <>
     
@@ -95,7 +54,7 @@ export const Dashboard = () => {
                     <div className="row">
                         <div className="col-12">
                         </div>
-                        
+                        <DashboardStatus></DashboardStatus>
                         
                     </div>
                     {/* end row*/}

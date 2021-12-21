@@ -113,13 +113,16 @@ function SideMenu() {
                 <li>
                     <a href="#h_api" data-toggle="collapse">
                         <i className="mdi mdi-file-key mr-1"></i>
-                        <span> Group </span>
+                        <span> Api Key </span>
                         <span className="menu-arrow"></span>
                     </a>
                     <div className="collapse" id="h_api">
                         <ul className="nav-second-level">
                             <li> <Link to="/apikey">View</Link> </li>
                             <li><Link to="/apikey/create">Create</Link></li>
+
+                            <li><Link to="/apikey/generate">Generator</Link></li>
+
 
                         </ul>
                     </div>
