@@ -32,6 +32,7 @@ import SenderNumberRemove from './Components/Pages/SenderNumberRemove';
 import ApiKeyRemove from './Components/Pages/ApiKeyRemove';
 import ApiKeyView from './Components/Pages/ApiKeysView';
 import ApiKeyCreate from './Components/Pages/ApiKeyCreate';
+import PlanCreate from './Components/Pages/PlanCreate';
 function AppMain() {
     return (
         <Router>
@@ -157,6 +158,10 @@ function AppMain() {
 
                     <Route exact path="/plan">
                         <PlanView></PlanView>
+                    </Route>
+
+                    <Route exact path="/plan/create">
+                        <PlanCreate></PlanCreate>
                     </Route>
 
                     <Route exact path="/plan/delete/:id">

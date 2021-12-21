@@ -11,7 +11,7 @@ import DashboardStatus from "./DashboardStatus";
 function Dashboard(){
     return (
     <>
-    
+    <IsLoggegIn></IsLoggegIn>
     <div id="wrapper">
         <TopBar></TopBar>
         <LeftSideBar></LeftSideBar>

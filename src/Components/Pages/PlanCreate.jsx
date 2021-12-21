@@ -118,41 +118,41 @@ const PlanCreate = (props) => {
                                             <div className="form-group mb-3">
                                                 <label htmlFor="product-meta-keywords">Name</label>
                                                 <input value={name} onChange={(e) => setName(e.target.value)} type="text" className="form-control" name="Name" id="Name" placeholder="" />
-                                                <span className="field-validation-valid text-danger" data-valmsg-htmlhtmlFor="Name" data-valmsg-replace="true"></span>
+                                                <span className="field-validation-valid text-danger" data-valmsg-htmlhtmlfor="Name" data-valmsg-replace="true"></span>
                                             </div>
 
 
                                             <div className="form-group mb-3">
                                                 <label htmlFor="product-meta-keywords">Price</label>
                                                 <input value={price} onChange={(e) => setPrice(e.target.value)} type="text" className="form-control" name="Price" id="Price" placeholder="" />
-                                                <span className="field-validation-valid text-danger" data-valmsg-htmlhtmlFor="Name" data-valmsg-replace="true"></span>
+                                                <span className="field-validation-valid text-danger" data-valmsg-htmlhtmlfor="Name" data-valmsg-replace="true"></span>
                                             </div>
 
 
                                             <div className="form-group mb-3">
                                                 <label htmlFor="product-meta-keywords">Credit</label>
                                                 <input value={credit} onChange={(e) => setCredit(e.target.value)} type="text" className="form-control" name="Credit" id="Credit" placeholder="" />
-                                                <span className="field-validation-valid text-danger" data-valmsg-htmlhtmlFor="Name" data-valmsg-replace="true"></span>
+                                                <span className="field-validation-valid text-danger" data-valmsg-htmlhtmlfor="Name" data-valmsg-replace="true"></span>
                                             </div>
 
 
                                             <div className="form-group mb-3">
                                                 <label htmlFor="product-meta-keywords">Contact</label>
                                                 <input value={contact} onChange={(e) => setContact(e.target.value)} type="text" className="form-control" name="Contact" id="Contact" placeholder="" />
-                                                <span className="field-validation-valid text-danger" data-valmsg-htmlhtmlFor="Name" data-valmsg-replace="true"></span>
+                                                <span className="field-validation-valid text-danger" data-valmsg-htmlhtmlfor="Name" data-valmsg-replace="true"></span>
                                             </div>
 
 
                                             <div className="form-group mb-3">
                                                 <label htmlFor="product-meta-keywords">Template</label>
                                                 <input value={template} onChange={(e) => setTemplate(e.target.value)} type="text" className="form-control" name="Template" id="Template" placeholder="" />
-                                                <span className="field-validation-valid text-danger" data-valmsg-htmlhtmlFor="Name" data-valmsg-replace="true"></span>
+                                                <span className="field-validation-valid text-danger" data-valmsg-htmlhtmlfor="Name" data-valmsg-replace="true"></span>
                                             </div>
 
                                             <div className="form-group mb-3">
                                                 <label htmlFor="product-meta-keywords">ApiKey</label>
                                                 <input value={apikey} onChange={(e) => setApiKey(e.target.value)} type="text" className="form-control" name="ApiKey" id="ApiKey" placeholder="" />
-                                                <span className="field-validation-valid text-danger" data-valmsg-htmlhtmlFor="Name" data-valmsg-replace="true"></span>
+                                                <span className="field-validation-valid text-danger" data-valmsg-htmlhtmlfor="Name" data-valmsg-replace="true"></span>
                                             </div>
 
 
