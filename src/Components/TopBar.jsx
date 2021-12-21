@@ -1,7 +1,28 @@
 import { Link } from "react-router-dom";
+import axios from "axios";
+import React, { useState, useEffect } from "react";
+export const TopBar = () => {
+    const [apiData, setApidata] = useState([]);
+    const [name, setName] = useState("");
 
+    var UserId = null;
+    if (localStorage.getItem('user')) {
+        var obj = JSON.parse(localStorage.getItem('user'));
+        UserId = obj.UserId;
+    }
+   console.log(UserId);
 
-function TopBar() {
+    useEffect(() => {
+          const url = "user/get?UserId=" + UserId;
+          axios.get(url)
+                .then(resp => {
+                      //console.log(resp.data);
+                      //setApidata(resp.data);
+                      setName(resp.data[0].Name);
+                }).catch(err => {
+                      console.log(err);
+                });
+    }, []);
     return (
         <div className="navbar-custom">
             <div className="container-fluid">
@@ -132,7 +153,7 @@ function TopBar() {
                         <Link className="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light" data-toggle="dropdown" to="#" role="button" aria-haspopup="false" aria-expanded="false">
                             <img src="/assets/images/users/user-5.jpg" alt="user_img" className="rounded-circle" />
                             <span className="pro-user-name ml-1">
-                                Tanjimul Islam
+                                {name}
                                 <i className="mdi mdi-chevron-down"></i>
                             </span>
                         </Link>

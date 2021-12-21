@@ -28,10 +28,13 @@ const TemplateCreate = (props) => {
     const onSubmit = () => {
         if (name === "" && message === "") {
             setError("Name & Message Required");
+            setSuccess("");
         } else if (name === "") {
             setError("Name Required");
+            setSuccess("");
         } else if (message === "") {
             setError("Message Required");
+            setSuccess("");
         } else {
             setName("");
             setMessage("");

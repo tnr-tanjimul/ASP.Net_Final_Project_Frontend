@@ -62,7 +62,7 @@ const PaymentView = (props) => {
                                                         <tr>
 
                                                             <th>ID</th>
-                                                            <th>User</th>
+                                                         
                                                             <th>Plan</th>                                                           
                                                             <th>Status</th>
                                                             <th>Amount</th>
@@ -82,8 +82,8 @@ const PaymentView = (props) => {
                                                                     <td className="table-user">
                                                                         {p.Id}
                                                                     </td>
-                                                                    <td>{p.UserId}</td>
-                                                                    <td>{p.PlanId}</td>
+                                                                   
+                                                                    <td>{p.PlanName}</td>
                                                                     <td>
                                                                         {p.Status === "Success" &&
                                                                             <span className="badge badge-soft-success">{p.Status}</span>
@@ -100,8 +100,14 @@ const PaymentView = (props) => {
                                                                     <td>{p.CreatedAt}</td>
 
                                                                     <td>
-                                                                        <Link to={"/payment/edit/" + p.Id + ""} className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></Link>
-                                                                        <Link to={"/payment/delete/" + p.Id + ""} className="action-icon"> <i className="mdi mdi-delete"></i></Link>
+
+                                                                    {p.Status === "Pending" &&
+                                                                          <Link to={"/payment/make/" + p.Id + ""} className="action-icon">
+                                                                          <button type="button" className="btn btn-info btn-rounded waves-effect waves-light">Pay</button>
+                                                                        </Link>
+                                                                    }
+                                                                    
+                                                                        
                                                                     </td>
                                                                 </tr>
 

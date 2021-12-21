@@ -15,7 +15,7 @@ import FetchUserId from "./FetchUserId";
 
 
 
-const ContactView = (props) => {
+const ApiKeyView = (props) => {
     const [apiData, setApidata] = useState([]);
 
 
@@ -26,7 +26,7 @@ const ContactView = (props) => {
     }
 
     useEffect(() => {
-        var url = "contact/get?UserId=" + UserId;
+        var url = "apikey/get?UserId="+UserId;
         //alert(url);
         axios.get(url)
             .then(resp => {
@@ -50,7 +50,7 @@ const ContactView = (props) => {
 
                             {/* start page title */}
 
-                            <BreadcrumbNav page="Contact" title="View"></BreadcrumbNav>
+                            <BreadcrumbNav page="Api Keys" title="Api Keys"></BreadcrumbNav>
                             <div className="row">
                                 <div className="col-12">
                                     <div className="card">
@@ -62,9 +62,10 @@ const ContactView = (props) => {
                                                     <thead>
                                                         <tr key="999999">
                                                             <th>ID</th>
-                                                            <th>Group</th>
                                                             <th>Name</th>
-                                                            <th>Number</th>
+                                                            <th>Secret Key</th>
+                                                            <th>Counter</th>
+                                                            <th>Created Time</th>
 
 
 
@@ -77,17 +78,13 @@ const ContactView = (props) => {
                                                             apiData.map((p, index) => (
                                                                 <tr key={index}>
 
-                                                                    <td className="table-user">{p.Id}</td>
-
-                                                                    <td>{p.GroupName}</td>
-
+                                                                    <td className="table-user"> {p.Id} </td>
                                                                     <td>{p.Name}</td>
-
-                                                                    <td>{p.Number}</td>
-
+                                                                    <th>{p.SecretKey}</th>
+                                                                    <td>{p.Counter}</td>
+                                                                    <td>{p.CreatedAt}</td>
                                                                     <td>
-                                                                        <Link to={"/contact/edit/" + p.Id + ""} className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></Link>
-                                                                        <Link to={"/contact/delete/" + p.Id + ""} className="action-icon"> <i className="mdi mdi-delete"></i></Link>
+                                                                        <Link to={"/template/delete/" + p.Id + ""} className="action-icon"> <i className="mdi mdi-delete"></i></Link>
                                                                     </td>
                                                                 </tr>
 
@@ -123,4 +120,4 @@ const ContactView = (props) => {
     )
 }
 
-export default ContactView;
+export default ApiKeyView;

@@ -10,7 +10,7 @@ import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
 import AlertError from "./AlertError";
 import AlertSuccess from "./AlertSuccess";
-const GroupCreate = (props) => {
+const ApiKeyCreate = (props) => {
     let history = useHistory();
     function handleRedirect() {
         history.push("/group");
@@ -32,14 +32,14 @@ const GroupCreate = (props) => {
             setName("");
             setError("");
             onProcess();
-            setSuccess("Group Create Successfully");
+            setSuccess("Create Successfully");
         }
     };
 
 
     const onProcess = () => {
         var obj = { UserId: UserId, Name: name};
-        axios.post("group/add", obj)
+        axios.post("apikey/add", obj)
             .then(resp => {
                 var data = resp.data;
                 //alert(data.Message);
@@ -69,7 +69,7 @@ const GroupCreate = (props) => {
 
                             {/* start page title */}
 
-                            <BreadcrumbNav page="Create" title="Group"></BreadcrumbNav>
+                            <BreadcrumbNav page="Create" title="Api Key"></BreadcrumbNav>
 
                             <div>
 
@@ -134,4 +134,4 @@ const GroupCreate = (props) => {
     );
 }
 
-export default GroupCreate;
+export default ApiKeyCreate;

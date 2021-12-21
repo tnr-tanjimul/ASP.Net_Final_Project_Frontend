@@ -11,8 +11,8 @@ function SideMenu() {
 
                 <li className="menu-title">Navigation</li>
 
-                <li className="menuitem-active">
-                    <Link to="/" className="active">
+                <li>
+                    <Link to="/">
                         <i className="mdi mdi-view-dashboard-outline"></i>
                         <span> Dashboard </span>
                     </Link>
@@ -90,6 +90,40 @@ function SideMenu() {
                         <i className="fe-bar-chart-line mr-1"></i>
                         <span> Messeges </span>
                     </Link>
+                </li>
+
+                <li>
+                    <Link to="/plan">
+                        <i className="mdi mdi-view-grid-plus-outline mr-1"></i>
+                        <span> Plans </span>
+                    </Link>
+                </li>
+
+                <li>
+                    <Link to="/payment">
+                        <i className="mdi mdi-account-cash mr-1"></i>
+                        <span> Payments </span>
+                    </Link>
+                </li>
+
+
+                
+
+
+                <li>
+                    <a href="#h_api" data-toggle="collapse">
+                        <i className="mdi mdi-file-key mr-1"></i>
+                        <span> Group </span>
+                        <span className="menu-arrow"></span>
+                    </a>
+                    <div className="collapse" id="h_api">
+                        <ul className="nav-second-level">
+                            <li> <Link to="/apikey">View</Link> </li>
+                            <li><Link to="/apikey/create">Create</Link></li>
+
+                        </ul>
+                    </div>
+
                 </li>
 
 
