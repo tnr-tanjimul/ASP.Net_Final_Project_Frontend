@@ -10,49 +10,41 @@ import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
 import AlertError from "./AlertError";
 import AlertSuccess from "./AlertSuccess";
-const SenderNumberCreate = (props) => {
+const PlanCreate = (props) => {
     let history = useHistory();
     function handleRedirect() {
-        history.push("/senderNumber");
+        history.push("/plan");
     }
     var UserId = null;
-    if (localStorage.getItem('senderNumber')) {
-        var obj = JSON.parse(localStorage.getItem('senderNumber'));
+    if (localStorage.getItem('user')) {
+        var obj = JSON.parse(localStorage.getItem('user'));
         UserId = obj.UserId;
     }
     let [error, setError] = useState("");
     let [success, setSuccess] = useState("");
-    let [Number, setNumber] = useState("");
-    let [DeviceId, setDeviceId] = useState("");
-    let [ApiToken, setApiToken] = useState("");
+    let [name, setName] = useState("");
+    let [message, setMessage] = useState("");
 
     const onSubmit = () => {
-        if (Number === "" && DeviceId === "" && ApiToken === "") {
-            setError("All Field Required");
-        } else if (Number === "") {
-            setError("Number Required");
-        } else if (DeviceId === "") {
-            setError("Device ID Required");
-        }
-        else if (ApiToken === "") {
-            setError("ApiToken Required");
-        }
-        else {
-            setApiToken(null);
-            setDeviceId(null);
-            setNumber(null);
+        if (name === "" && message === "") {
+            setError("Name & Message Required");
+        } else if (name === "") {
+            setError("Name Required");
+        } else if (message === "") {
+            setError("Message Required");
+        } else {
+            setName("");
+            setMessage("");
             setError("");
             onProcess();
-            setSuccess("Sender Number Create Successfully");
+            setSuccess("Plan Create Successfully");
         }
     };
 
 
     const onProcess = () => {
-        var obj = { Number: Number, DeviceId: DeviceId, ApiToken: ApiToken };
-
-
-        axios.post("senderNumber/add", obj)
+        var obj = { Name: name, Price: Price, Credits: Credits, Templates: Templates, ApiKeys: ApiKeys, Contacts: Contacts };
+        axios.post("plan/add", obj)
             .then(resp => {
                 var data = resp.data;
                 //alert(data.Message);
@@ -82,7 +74,7 @@ const SenderNumberCreate = (props) => {
 
                             {/* start page title */}
 
-                            <BreadcrumbNav page="SenderNumber" title="Create"></BreadcrumbNav>
+                            <BreadcrumbNav page="Plan" title="Create"></BreadcrumbNav>
 
                             <div>
 
@@ -102,32 +94,17 @@ const SenderNumberCreate = (props) => {
 
 
                                             <div className="form-group mb-3">
-                                                <label htmlFor="product-meta-keywords">Number</label>
-                                                <input value={Number} onChange={(e) => setNumber(e.target.value)} type="text" className="form-control" name="Number" id="Number" placeholder="" />
-                                                <span className="field-validation-valid text-danger" data-valmsg-htmlhtmlFor="Name" data-valmsg-replace="true"></span>
-                                            </div>
-
-
-                                            <div className="form-group mb-3">
-                                                <label htmlFor="product-meta-keywords">Device ID</label>
-                                                <input value={DeviceId} onChange={(e) => setDeviceId(e.target.value)} type="text" className="form-control" name="DeviceId" id="DeviceId" placeholder="" />
-                                                <span className="field-validation-valid text-danger" data-valmsg-htmlhtmlFor="Name" data-valmsg-replace="true"></span>
-                                            </div>
-
-
-                                            <div className="form-group mb-3">
-                                                <label htmlFor="product-meta-keywords">Api Token</label>
-                                                <input value={ApiToken} onChange={(e) => setApiToken(e.target.value)} type="text" className="form-control" name="ApiToken" id="ApiToken" placeholder="" />
+                                                <label htmlFor="product-meta-keywords">Name</label>
+                                                <input value={name} onChange={(e) => setName(e.target.value)} type="text" className="form-control" name="Name" id="Name" placeholder="" />
                                                 <span className="field-validation-valid text-danger" data-valmsg-htmlhtmlFor="Name" data-valmsg-replace="true"></span>
                                             </div>
 
 
 
-                                            
 
 
                                             <div className="text-center mb-3">
-                                                <Link to="/senderNumber" type="button" className="btn w-sm btn-light waves-effect">Cancel</Link>
+                                                <Link to="/contact" type="button" className="btn w-sm btn-light waves-effect">Cancel</Link>
                                                 <button type="submit" onClick={onSubmit} className="btn w-sm btn-success waves-effect waves-light">Save</button>
 
                                             </div>
@@ -162,4 +139,4 @@ const SenderNumberCreate = (props) => {
     );
 }
 
-export default SenderNumberCreate;
+export default PlanCreate;
