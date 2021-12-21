@@ -5,8 +5,51 @@ import TopBar from "../TopBar";
 import DashItem from "./DashItem";
 import { Link } from "react-router-dom";
 import IsLoggegIn from "../IsLoggegIn";
+import axios from "axios";
+import React, { useState, useEffect } from "react";
+export const Dashboard = () => {
+    const [apiData, setApidata] = useState([]);
+    const [SendMessages, setSendMessages] = useState("");
+    const [FailedMessages, setFailedMessages] = useState("");
+    const [SuccessMessages, setSuccessMessages] = useState("");
+    const [Credit, setCredit] = useState("");
+    const [Users, setUsers] = useState("");
+    const [Groups, setGroups] = useState("");
+    const [Templates, setTemplates] = useState("");
+    const [ApiKeys, setApiKeys] = useState("");
+    const [Payemnts, setPayemnts] = useState("");
 
-function Dashboard() {
+    var UserId = null;
+    if (localStorage.getItem('user')) {
+        var obj = JSON.parse(localStorage.getItem('user'));
+        UserId = obj.UserId;
+        await TuseEffect();
+    }
+   //alert(UserId);
+
+    async TuseEffect(() => {
+          const url = "dashboard/get?UserId=" + UserId;
+          axios.get(url)
+                .then(resp => {
+                     // console.log(resp.data);
+                      setApidata(resp.data);
+                      
+                      setSendMessages(apiData.SendMessages);
+
+                      
+                      setFailedMessages(apiData.FailedMessages);
+                      setSuccessMessages(apiData.SuccessMessages);
+                      setCredit(apiData.Credit);
+                      setUsers(apiData.Users);
+                      setGroups(apiData.Groups);
+                      setTemplates(apiData.Templates);
+                      setApiKeys(apiData.ApiKeys);
+                      setPayemnts(apiData.Payemnts);
+                      
+                }).catch(err => {
+                      console.log(err);
+                });
+    }, []);
     return (
     <>
     
@@ -52,12 +95,7 @@ function Dashboard() {
                     <div className="row">
                         <div className="col-12">
                         </div>
-                        <DashItem classColor="info" icon="fe-message-square" text="Total Messages" count="17"></DashItem>
-                        <DashItem classColor="success" icon="fe-message-square" text="Success" count="9"></DashItem>
-                        <DashItem classColor="warning" icon="fe-message-square" text="Failed" count="8"></DashItem>
-                        <DashItem classColor="success" icon="fe-heart" text="Credit" count="170"></DashItem>
-                        <DashItem classColor="pink" icon="fe-bar-chart-line" text="Groups" count="6"></DashItem>
-                        <DashItem classColor="info" icon="mdi mdi-view-dashboard-outline" text="Templates" count="2"></DashItem>
+                        
                         
                     </div>
                     {/* end row*/}
