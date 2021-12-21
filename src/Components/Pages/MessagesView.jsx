@@ -49,7 +49,7 @@ const MessagesView = (props) => {
 
                             {/* start page title */}
 
-                            <BreadcrumbNav page="Group" title="View"></BreadcrumbNav>
+                            <BreadcrumbNav page="Messages" title="View"></BreadcrumbNav>
                             <div className="row">
                                 <div className="col-12">
                                     <div className="card">
@@ -91,7 +91,7 @@ const MessagesView = (props) => {
                                                                     </td>
 
                                                                     <td>
-                                                                        <Link to={"/message/edit/" + p.Id + ""} className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></Link>
+                                                                       
                                                                         <Link to={"/message/delete/" + p.Id + ""} className="action-icon"> <i className="mdi mdi-delete"></i></Link>
                                                                     </td>
                                                                 </tr>

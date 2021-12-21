@@ -5,16 +5,10 @@ import TopBar from "../TopBar";
 import BreadcrumbNav from "../BreadcrumbNav";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Redirect } from 'react-router-dom';
-import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
 import AlertError from "./AlertError";
 import AlertSuccess from "./AlertSuccess";
 const UserCreate = (props) => {
-    let history = useHistory();
-    function handleRedirect() {
-        history.push("/user");
-    }
     var UserId = null;
     if (localStorage.getItem('user')) {
         var obj = JSON.parse(localStorage.getItem('user'));
@@ -24,9 +18,9 @@ const UserCreate = (props) => {
     let [success, setSuccess] = useState("");
     let [name, setName] = useState("");
     let [email, setEmail] = useState("");
+    let [password, setPassword] = useState("");
     let [credit, setCredit] = useState("");
     let [role, setRole] = useState("");
-    let [regtime, setRegTime] = useState("");
     let [maxcontacts, setMaxContacts] = useState("");
     let [maxapikeys, setMaxApiKeys] = useState("");
     let [maxtemplates, setMaxTemplates] = useState("");
@@ -35,18 +29,20 @@ const UserCreate = (props) => {
 
 
     const onSubmit = () => {
-        if (name === "" && email === "" && credit === "" && role === "" && regtime === "" && maxcontacts === "" && maxapikeys === "" && maxtemplates === "") {
+        if (name === "" && email === "" && credit === "" && role === "" && maxcontacts === "" && maxapikeys === "" && maxtemplates === "") {
             setError("All fields Required");
         } else if (name === "") {
             setError("Name Required");
         } else if (email === "") {
             setError("Email Required");
-        } else if (credit === "") {
+        }
+        else if (password === "") {
+            setError("Password Required");
+        }
+        else if (credit === "") {
             setError("Credit Required");
         } else if (role === "") {
             setError("Role Required");
-        } else if (regtime === "") {
-            setError("RegTime Required");
         } else if (maxcontacts === "") {
             setError("Maxcontacts Required");
         } else if (maxapikeys === "") {
@@ -58,7 +54,7 @@ const UserCreate = (props) => {
             setEmail("");
             setCredit("");
             setRole("");
-            setRegTime("");
+            setPassword("");
             setMaxContacts("");
             setMaxApiKeys("");
             setMaxTemplates("");
@@ -70,7 +66,7 @@ const UserCreate = (props) => {
 
 
     const onProcess = () => {
-        var obj = { Name: name, Email: email, Credit: credit, Role: role, RegTime: regtime, MaxContacts: maxcontacts, MaxApiKeys: maxapikeys, MaxTemplates: maxtemplates };
+        var obj = { Name: name, Email: email, Password: password, Credit: credit, Role: role, RegTime: null, MaxContacts: maxcontacts, MaxApiKeys: maxapikeys, MaxTemplates: maxtemplates };
 
 
         axios.post("user/add", obj)
@@ -103,7 +99,7 @@ const UserCreate = (props) => {
 
                             {/* start page title */}
 
-                            <BreadcrumbNav page="User" title="Create"></BreadcrumbNav>
+                            <BreadcrumbNav page="User Create" title="User Create"></BreadcrumbNav>
 
                             <div>
 
@@ -127,26 +123,40 @@ const UserCreate = (props) => {
                                                 <input value={name} onChange={(e) => setName(e.target.value)} type="text" className="form-control" name="Name" id="Name" placeholder="" />
                                                 <span className="field-validation-valid text-danger" data-valmsg-htmlhtmlFor="Name" data-valmsg-replace="true"></span>
                                             </div>
+
+
                                             <div className="form-group mb-3">
                                                 <label htmlFor="product-meta-keywords">Email</label>
                                                 <input value={email} onChange={(e) => setEmail(e.target.value)} type="text" className="form-control" name="Email" id="Email" placeholder="" />
                                                 <span className="field-validation-valid text-danger" data-valmsg-htmlhtmlFor="Email" data-valmsg-replace="true"></span>
                                             </div>
+
+
+                                            <div className="form-group mb-3">
+                                                <label htmlFor="product-meta-keywords">Password</label>
+                                                <input value={password} onChange={(e) => setPassword(e.target.value)} type="password" className="form-control" name="Email" id="Email" placeholder="" />
+                                                <span className="field-validation-valid text-danger" data-valmsg-htmlhtmlFor="Email" data-valmsg-replace="true"></span>
+                                            </div>
+
+
+
                                             <div className="form-group mb-3">
                                                 <label htmlFor="product-meta-keywords">Credit</label>
                                                 <input value={credit} onChange={(e) => setCredit(e.target.value)} type="text" className="form-control" name="Credit" id="Credit" placeholder="" />
                                                 <span className="field-validation-valid text-danger" data-valmsg-htmlhtmlFor="Credit" data-valmsg-replace="true"></span>
                                             </div>
-                                            <div className="form-group mb-3">
-                                                <label htmlFor="product-meta-keywords">Role</label>
-                                                <input value={role} onChange={(e) => setRole(e.target.value)} type="text" className="form-control" name="Role" id="Role" placeholder="" />
-                                                <span className="field-validation-valid text-danger" data-valmsg-htmlhtmlFor="Role" data-valmsg-replace="true"></span>
+
+
+                                            <div class="form-group mb-3">
+                                                <label for="product-meta-title">Role</label>
+                                                <select name="TemplateId1" onChange={(e) => setRole(e.target.value)} onClick={(e) => setRole(e.target.value)} class="custom-select">
+                                                    <option value="">Select One</option>
+                                                    <option value="2">User</option>
+                                                    <option value="1">Admin</option>
+                                                </select>
+                                                <span class="field-validation-valid text-danger" data-valmsg-replace="true"></span>
                                             </div>
-                                            <div className="form-group mb-3">
-                                                <label htmlFor="product-meta-keywords">RegTime</label>
-                                                <input value={regtime} onChange={(e) => setRegTime(e.target.value)} type="text" className="form-control" name="RegTime" id="RegTime" placeholder="" />
-                                                <span className="field-validation-valid text-danger" data-valmsg-htmlhtmlFor="RegTime" data-valmsg-replace="true"></span>
-                                            </div>
+
                                             <div className="form-group mb-3">
                                                 <label htmlFor="product-meta-keywords">MaxContacts</label>
                                                 <input value={maxcontacts} onChange={(e) => setMaxContacts(e.target.value)} type="text" className="form-control" name="MaxContacts" id="MaxContacts" placeholder="" />
@@ -154,12 +164,12 @@ const UserCreate = (props) => {
                                             </div>
                                             <div className="form-group mb-3">
                                                 <label htmlFor="product-meta-keywords">MaxApiKeys</label>
-                                                <input value={maxapikeys} onChange={(e) => setName(e.target.value)} type="text" className="form-control" name="MaxApiKeys" id="MaxApiKeys" placeholder="" />
+                                                <input value={maxapikeys} onChange={(e) => setMaxApiKeys(e.target.value)} type="text" className="form-control" name="MaxApiKeys" id="MaxApiKeys" placeholder="" />
                                                 <span className="field-validation-valid text-danger" data-valmsg-htmlhtmlFor="MaxApiKeys" data-valmsg-replace="true"></span>
                                             </div>
                                             <div className="form-group mb-3">
                                                 <label htmlFor="product-meta-keywords">MaxTemplates</label>
-                                                <input value={maxtemplates} onChange={(e) => setName(e.target.value)} type="text" className="form-control" name="MaxTemplates" id="MaxTemplates" placeholder="" />
+                                                <input value={maxtemplates} onChange={(e) => setMaxTemplates(e.target.value)} type="text" className="form-control" name="MaxTemplates" id="MaxTemplates" placeholder="" />
                                                 <span className="field-validation-valid text-danger" data-valmsg-htmlhtmlFor="MaxTemplates" data-valmsg-replace="true"></span>
                                             </div>
 

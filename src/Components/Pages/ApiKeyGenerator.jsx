@@ -77,10 +77,10 @@ const ApiKeyGenerator = (props) => {
         axios.get(url)
             .then(resp => {
                 var data = resp.data;
-                //alert(data.Message);
+               // alert("hey");
                 //console.log(data);
                 //handleRedirect();
-                setSenderNumberData(resp.data);
+               setApiKeyData(resp.data);
             }).catch(err => {
                 console.log(err);
             });
@@ -101,7 +101,7 @@ const ApiKeyGenerator = (props) => {
 
                             {/* start page title */}
 
-                            <BreadcrumbNav page="Sender" title="Create"></BreadcrumbNav>
+                            <BreadcrumbNav page="Api Key Generator" title="Api Key Generator"></BreadcrumbNav>
 
                             <div>
 
@@ -125,12 +125,12 @@ const ApiKeyGenerator = (props) => {
 
 
                                              <div className="form-group mb-3">
-                                                <label htmlFor="product-meta-title">Sender Numbers</label>
-                                                <select onClick={fetchSenderNumber} onChange={(e) => setSenderNumber(e.target.value)} name="SenderNumberId" className="custom-select " required="">
+                                                <label htmlFor="product-meta-title">Api keys</label>
+                                                <select onClick={fetchApiKey} onChange={(e) => setApiKey(e.target.value)} name="ApiId" className="custom-select " required="">
                                                     <option value="">Open menu</option>
                                                     {
-                                                        senderNumberData.map(p => (
-                                                            <option key={p.Id} value={p.Id}>{p.Number}</option>
+                                                        apiKeyData.map(p => (
+                                                            <option key={p.Id} value={p.SecretKey}>{p.Name}</option>
                                                         ))
                                                     }
                                                 </select>

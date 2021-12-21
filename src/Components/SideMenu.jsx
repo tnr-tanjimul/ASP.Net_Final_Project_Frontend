@@ -164,12 +164,7 @@ function SideMenu() {
                 </li>
 
 
-                <li>
-                    <Link to="/admin" className="active">
-                        <i className="fe-message-square mr-1"></i>
-                        <span> Admin </span>
-                    </Link>
-                </li>
+                
 
 
 

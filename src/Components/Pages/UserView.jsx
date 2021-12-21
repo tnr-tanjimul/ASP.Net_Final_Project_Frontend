@@ -50,7 +50,7 @@ const UserView = (props) => {
 
                             {/* start page title */}
 
-                            <BreadcrumbNav page="User" title="View"></BreadcrumbNav>
+                            <BreadcrumbNav page="Users" title="View"></BreadcrumbNav>
                             <div className="row">
                                 <div className="col-12">
                                     <div className="card">
