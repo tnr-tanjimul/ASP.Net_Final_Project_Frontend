@@ -3,31 +3,65 @@ import AuthQuotes from "../AuthQuotes";
 import AuthSocialButton from "../AuthSocialButton";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import React, {useState, userEffect} from "react";
-import  { Redirect } from 'react-router-dom'
-const AuthRegistration = ()=>{
-    let[name, setName] = useState("");
-    let[email, setEmail] = useState("");
-    let[password, setPassword] =useState("");
+import React, { useState, userEffect } from "react";
+import { Redirect } from 'react-router-dom'
+import { useHistory } from "react-router-dom";
+import AlertError from "../Pages/AlertError";
+import AlertSuccess from "../Pages/AlertSuccess";
+const AuthRegistration = (props) => {
+    let history = useHistory();
+    function handleRedirect() {
+        history.push("/template");
+    }
+    var UserId = null;
+    if (localStorage.getItem('user')) {
+        var obj = JSON.parse(localStorage.getItem('user'));
+        UserId = obj.UserId;
+    }
+    let [error, setError] = useState("");
+    let [success, setSuccess] = useState("");
+    let [name, setName] = useState("");
+    let [email, setEmail] = useState("");
+    let [password, setPassword] = useState("");
+    const onSubmit = () => {
+        if (name === "" && email === "" && password === "") {
+            setError("All Field Required");
+            setSuccess("");
+        } else if (name === "") {
+            setError("Name Required");
+            setSuccess("");
+        } else if (email === "") {
+            setError("Email Required");
+            setSuccess("");
+        }
+        else if (password === "") {
+            setError("Password Required");
+            setSuccess("");
+        }
+        else {
+            setName("");
+            setEmail("");
+            setPassword("")
+            setError("");
+            onProcess();
+            setSuccess("User Registration Successfull");
+        }
+    };
 
-    const RegisterSubmit= ()=>{
-        var obj = {name: name, email: email, password: password};
-        axios.post("api/user/add",obj)
-        .then(resp=>{
-            var token = resp.data;
-            alert(token.message);
-            console.log(token);
-            //var user = {userId: token.userid, access_token:token.token};
-            //localStorage.setItem('user',JSON.stringify(user));
 
-            //return <Redirect to='/'  />
+    const onProcess = () => {
+        var obj = { Name: name, Email: email, Password: password };
+        axios.post("register", obj)
+            .then(resp => {
+                var data = resp.data;
+                //alert(data.Message);
+                console.log(data);
+                //handleRedirect();
 
 
-
-            // console.log(localStorage.getItem('user'));
-        }).catch(err=>{
-            console.log(err);
-        });
+            }).catch(err => {
+                console.log(err);
+            });
 
 
     }
@@ -49,18 +83,19 @@ const AuthRegistration = ()=>{
                         <div>
 
 
-                           
+
                             <div className="form-group">
 
 
-
+                                {error ? <AlertError msg={error}></AlertError> : ""}
+                                {success ? <AlertSuccess msg={success}></AlertSuccess> : ""}
 
 
                             </div>
 
                             <div className="form-group">
                                 <label htmlFor="Name">Full Name</label>
-                                <input className="form-control " value={name} onChange={(e)=>setName(e.target.value)} type="text" name="Name" id="Name" placeholder="Enter your name" autoComplete="name" autoFocus />
+                                <input className="form-control " value={name} onChange={(e) => setName(e.target.value)} type="text" name="Name" id="Name" placeholder="Enter your name" autoComplete="name" autoFocus />
                                 <span className="field-validation-valid text-danger" data-valmsg-htmlhtmlfor="Name" data-valmsg-replace="true"></span>
 
                             </div>
@@ -69,14 +104,14 @@ const AuthRegistration = ()=>{
 
                             <div className="form-group">
                                 <label htmlFor="Email">Email address</label>
-                                <input className="form-control " value={email} onChange={(e)=>setEmail(e.target.value)} type="text" name="Email" id="Email" placeholder="Enter your email" autoComplete="email" autoFocus />
+                                <input className="form-control " value={email} onChange={(e) => setEmail(e.target.value)} type="text" name="Email" id="Email" placeholder="Enter your email" autoComplete="email" autoFocus />
                                 <span className="field-validation-valid text-danger" data-valmsg-htmlhtmlfor="Email" data-valmsg-replace="true"></span>
                             </div>
                             <div className="form-group">
                                 <Link to="auth-recoverpw-2.php" className="text-muted float-right"><small>Forgot your password?</small></Link>
                                 <label htmlFor="Password">Password</label>
                                 <div className="input-group input-group-merge">
-                                    <input value={password} onChange={(e)=>setPassword(e.target.value)} type="password" name="Password" id="Password" className="form-control " placeholder="Enter your password" />
+                                    <input value={password} onChange={(e) => setPassword(e.target.value)} type="password" name="Password" id="Password" className="form-control " placeholder="Enter your password" />
 
 
 
@@ -96,7 +131,7 @@ const AuthRegistration = ()=>{
                                 </div>
                             </div>
                             <div className="form-group mb-0 text-center">
-                                <button className="btn btn-primary waves-effect waves-light btn-block" onClick={RegisterSubmit}> Sign Up </button>
+                                <button className="btn btn-primary waves-effect waves-light btn-block" onClick={onSubmit}> Sign Up </button>
                             </div>
                             {/* social*/}
                             <AuthSocialButton></AuthSocialButton>
