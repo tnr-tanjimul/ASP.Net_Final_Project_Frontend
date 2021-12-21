@@ -15,6 +15,7 @@ class Contact extends Component {
     }
     render() {
         return (
+            
             <div className="content-page">
                 <div className="content">
 

@@ -12,6 +12,7 @@ import { Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import FetchUserId from "./FetchUserId";
+import IsLoggegIn from "../IsLoggegIn";
 
 
 
@@ -38,6 +39,7 @@ const MessagesView = (props) => {
     }, []);
     return (
         <>
+        <IsLoggegIn></IsLoggegIn>
             <div id="wrapper">
                 <TopBar></TopBar>
                 <LeftSideBar></LeftSideBar>

@@ -8,6 +8,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import AlertError from "./AlertError";
 import AlertSuccess from "./AlertSuccess";
+import IsLoggegIn from "../IsLoggegIn";
 const UserCreate = (props) => {
     var UserId = null;
     if (localStorage.getItem('user')) {
@@ -88,6 +89,7 @@ const UserCreate = (props) => {
 
     return (
         <>
+        <IsLoggegIn></IsLoggegIn>
             <div id="wrapper">
                 <TopBar></TopBar>
                 <LeftSideBar></LeftSideBar>

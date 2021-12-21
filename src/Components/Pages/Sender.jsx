@@ -7,6 +7,7 @@ import axios from "axios";
 import React, { useState, userEffect } from "react";
 import AlertError from "./AlertError";
 import AlertSuccess from "./AlertSuccess";
+import IsLoggegIn from "../IsLoggegIn";
 const Sender = (props) => {
     var UserId = null;
     if (localStorage.getItem('user')) {
@@ -115,6 +116,7 @@ const Sender = (props) => {
 
     return (
         <>
+        <IsLoggegIn></IsLoggegIn>
             <div id="wrapper">
                 <TopBar></TopBar>
                 <LeftSideBar></LeftSideBar>

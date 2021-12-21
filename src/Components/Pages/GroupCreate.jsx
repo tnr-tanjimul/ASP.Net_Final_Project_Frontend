@@ -10,6 +10,7 @@ import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
 import AlertError from "./AlertError";
 import AlertSuccess from "./AlertSuccess";
+import IsLoggegIn from "../IsLoggegIn";
 const GroupCreate = (props) => {
     let history = useHistory();
     function handleRedirect() {
@@ -58,6 +59,7 @@ const GroupCreate = (props) => {
 
     return (
         <>
+        <IsLoggegIn></IsLoggegIn>
             <div id="wrapper">
                 <TopBar></TopBar>
                 <LeftSideBar></LeftSideBar>

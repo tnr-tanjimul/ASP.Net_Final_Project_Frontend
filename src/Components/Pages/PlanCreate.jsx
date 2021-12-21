@@ -10,6 +10,7 @@ import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
 import AlertError from "./AlertError";
 import AlertSuccess from "./AlertSuccess";
+import IsLoggegIn from "../IsLoggegIn";
 const PlanCreate = (props) => {
     let history = useHistory();
     function handleRedirect() {
@@ -85,6 +86,7 @@ const PlanCreate = (props) => {
 
     return (
         <>
+        <IsLoggegIn></IsLoggegIn>
             <div id="wrapper">
                 <TopBar></TopBar>
                 <LeftSideBar></LeftSideBar>
