@@ -13,8 +13,8 @@ if(localStorage.getItem('user')){
   var obj = JSON.parse(localStorage.getItem('user'));
   token = obj.access_token;
 }
-axios.defaults.baseURL="https://localhost:44390/api/"; //local Server
-//axios.defaults.baseURL="http://apwt.tnrsoft.com/api/"; // live Server
+//axios.defaults.baseURL="https://localhost:44390/api/"; //local Server
+axios.defaults.baseURL="https://final.tnrsms.xyz/api/"; // live Server
 axios.defaults.headers.common["Authorization"] = token;
 
 ReactDOM.render(
@@ -27,4 +27,5 @@ ReactDOM.render(
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+// tanjimul
 reportWebVitals();
