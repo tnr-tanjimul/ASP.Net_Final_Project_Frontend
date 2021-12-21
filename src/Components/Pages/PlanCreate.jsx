@@ -20,38 +20,60 @@ const PlanCreate = (props) => {
         var obj = JSON.parse(localStorage.getItem('user'));
         UserId = obj.UserId;
     }
+    let [apiData, setApiData] = useState("");
     let [error, setError] = useState("");
     let [success, setSuccess] = useState("");
     let [name, setName] = useState("");
-    let [message, setMessage] = useState("");
+    let [price, setPrice] = useState("");
+    let [credit, setCredit] = useState("");
+    let [template, setTemplate] = useState("");
+    let [apikey, setApiKey] = useState("");
+    let [contact, setContact] = useState("");
+
 
     const onSubmit = () => {
-        if (name === "" && message === "") {
-            setError("Name & Message Required");
+        if (name === "" && price === "" && credit === "" && template === "" && apikey === "" && contact === "") {
+            setError("All Field Required");
         } else if (name === "") {
             setError("Name Required");
-        } else if (message === "") {
-            setError("Message Required");
-        } else {
+        } else if (price === "") {
+            setError("Price Required");
+        }
+        else if (credit === "") {
+            setError("Credit Required");
+        }
+        else if (template === "") {
+            setError("Template Required");
+        }
+        else if (contact === "") {
+            setError("Contact Required");
+        }
+        
+        
+        else {
             setName("");
-            setMessage("");
+            setPrice("");
+            setCredit("");
+            setTemplate("");
+            setApiKey("");
+            setContact("");
             setError("");
             onProcess();
-            setSuccess("Plan Create Successfully");
+            setSuccess(apiData.message);
         }
     };
 
 
     const onProcess = () => {
-        var obj = { Name: name, Price: Price, Credits: Credits, Templates: Templates, ApiKeys: ApiKeys, Contacts: Contacts };
+        var obj = { Name: name, Price: price, Credits: credit, Templates: template, ApiKeys: apikey, Contacts: contact };
         axios.post("plan/add", obj)
             .then(resp => {
                 var data = resp.data;
                 //alert(data.Message);
-                console.log(data);
+                //console.log(data);
                 //handleRedirect();
 
-
+                setApiData(resp.data);
             }).catch(err => {
                 console.log(err);
             });
@@ -98,6 +120,45 @@ const PlanCreate = (props) => {
                                                 <input value={name} onChange={(e) => setName(e.target.value)} type="text" className="form-control" name="Name" id="Name" placeholder="" />
                                                 <span className="field-validation-valid text-danger" data-valmsg-htmlhtmlFor="Name" data-valmsg-replace="true"></span>
                                             </div>
+
+
+                                            <div className="form-group mb-3">
+                                                <label htmlFor="product-meta-keywords">Price</label>
+                                                <input value={price} onChange={(e) => setPrice(e.target.value)} type="text" className="form-control" name="Price" id="Price" placeholder="" />
+                                                <span className="field-validation-valid text-danger" data-valmsg-htmlhtmlFor="Name" data-valmsg-replace="true"></span>
+                                            </div>
+
+
+                                            <div className="form-group mb-3">
+                                                <label htmlFor="product-meta-keywords">Credit</label>
+                                                <input value={credit} onChange={(e) => setCredit(e.target.value)} type="text" className="form-control" name="Credit" id="Credit" placeholder="" />
+                                                <span className="field-validation-valid text-danger" data-valmsg-htmlhtmlFor="Name" data-valmsg-replace="true"></span>
+                                            </div>
+
+
+                                            <div className="form-group mb-3">
+                                                <label htmlFor="product-meta-keywords">Contact</label>
+                                                <input value={contact} onChange={(e) => setContact(e.target.value)} type="text" className="form-control" name="Contact" id="Contact" placeholder="" />
+                                                <span className="field-validation-valid text-danger" data-valmsg-htmlhtmlFor="Name" data-valmsg-replace="true"></span>
+                                            </div>
+
+
+                                            <div className="form-group mb-3">
+                                                <label htmlFor="product-meta-keywords">Template</label>
+                                                <input value={template} onChange={(e) => setTemplate(e.target.value)} type="text" className="form-control" name="Template" id="Template" placeholder="" />
+                                                <span className="field-validation-valid text-danger" data-valmsg-htmlhtmlFor="Name" data-valmsg-replace="true"></span>
+                                            </div>
+
+                                            <div className="form-group mb-3">
+                                                <label htmlFor="product-meta-keywords">ApiKey</label>
+                                                <input value={apikey} onChange={(e) => setApiKey(e.target.value)} type="text" className="form-control" name="ApiKey" id="ApiKey" placeholder="" />
+                                                <span className="field-validation-valid text-danger" data-valmsg-htmlhtmlFor="Name" data-valmsg-replace="true"></span>
+                                            </div>
+
+
+
+                                            
+
 
 
 
