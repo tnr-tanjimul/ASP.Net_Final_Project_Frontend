@@ -105,6 +105,15 @@ function SideMenu() {
                     </Link>
                 </li>
 
+                {role == "1" &&
+                    <li>
+                        <Link to="/plan/create">
+                            <i className="mdi mdi-view-grid-plus-outline mr-1"></i>
+                            <span> Plans Create</span>
+                        </Link>
+                    </li>
+                }
+
                 <li>
                     <Link to="/payment">
                         <i className="mdi mdi-account-cash mr-1"></i>
@@ -113,7 +122,7 @@ function SideMenu() {
                 </li>
 
 
-                
+
 
 
                 <li>
@@ -138,23 +147,23 @@ function SideMenu() {
 
 
                 {role == "1" &&
-                <li>
-                    <a href="#h_user" data-toggle="collapse">
-                        <i className="mdi mdi-account-convert"></i>
-                        <span> User </span>
-                        <span className="menu-arrow"></span>
-                    </a>
-                    <div className="collapse" id="h_user">
-                        <ul className="nav-second-level">
-                            <li> <Link to="/user">View</Link> </li>
-                            <li><Link to="/user/create">Create</Link></li>
+                    <li>
+                        <a href="#h_user" data-toggle="collapse">
+                            <i className="mdi mdi-account-convert"></i>
+                            <span> User </span>
+                            <span className="menu-arrow"></span>
+                        </a>
+                        <div className="collapse" id="h_user">
+                            <ul className="nav-second-level">
+                                <li> <Link to="/user">View</Link> </li>
+                                <li><Link to="/user/create">Create</Link></li>
 
-                        </ul>
-                    </div>
+                            </ul>
+                        </div>
 
-                </li>
-                }   
-                
+                    </li>
+                }
+
 
 
                 <li>
@@ -166,15 +175,16 @@ function SideMenu() {
                     <div className="collapse" id="h_SenderNumber">
                         <ul className="nav-second-level">
                             <li> <Link to="/sender-number">View</Link> </li>
-                            <li><Link to="/sender-number/create">Create</Link></li>
-
+                            {role == "1" &&
+                                <li><Link to="/sender-number/create">Create</Link></li>
+                            }
                         </ul>
                     </div>
 
                 </li>
 
 
-                
+
 
 
 
