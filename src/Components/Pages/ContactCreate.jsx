@@ -45,20 +45,21 @@ const ContactCreate = (props) => {
 
             setError("");
             onProcess();
-            setSuccess("Contact Create Successfully");
+            //setSuccess("Contact Create Successfully");
         }
     };
 
 
     const onProcess = () => {
         var obj = { GroupId: groupid, Number: number, Name: name };
+        console.log(obj);
         axios.post("contact/add", obj)
             .then(resp => {
                 var data = resp.data;
                 //alert(data.Message);
                 console.log(data);
                 //handleRedirect();
-
+                setSuccess(resp.data.message);
 
             }).catch(err => {
                 console.log(err);
@@ -134,13 +135,13 @@ const ContactCreate = (props) => {
                                             <div className="form-group mb-3">
                                                 <label htmlFor="product-meta-keywords">Number</label>
                                                 <input value={number} onChange={(e) => setNumber(e.target.value)} type="text" className="form-control" name="Number" id="Number" placeholder="" />
-                                                <span className="field-validation-valid text-danger" data-valmsg-htmlhtmlFor="Number" data-valmsg-replace="true"></span>
+                                                <span className="field-validation-valid text-danger" data-valmsg-htmlhtmlfor="Number" data-valmsg-replace="true"></span>
                                             </div>
 
                                             <div className="form-group mb-3">
                                                 <label htmlFor="product-meta-keywords">Name</label>
                                                 <input value={name} onChange={(e) => setName(e.target.value)} type="text" className="form-control" name="Name" id="Name" placeholder="" />
-                                                <span className="field-validation-valid text-danger" data-valmsg-htmlhtmlFor="Name" data-valmsg-replace="true"></span>
+                                                <span className="field-validation-valid text-danger" data-valmsg-htmlhtmlfor="Name" data-valmsg-replace="true"></span>
                                             </div>
 
                                             <div className="text-center mb-3">

@@ -56,6 +56,8 @@ const Sender = (props) => {
 
     const onProcess = () => {
         var obj = { UserId: UserId, SenderNumberId: senderNumber,Numbers: number, Message: message };
+        //alert(obj);
+        console.log(obj);
         axios.post("sender", obj)
             .then(resp => {
                 var data = resp.data;
@@ -63,7 +65,8 @@ const Sender = (props) => {
                 //alert("njj");
                 console.log(data);
                 //handleRedirect();
-                setApidata(resp.data);
+                //setApidata(resp.data);
+                setSuccess(resp.data.message);
             }).catch(err => {
                 console.log(err);
             });
@@ -177,7 +180,7 @@ const Sender = (props) => {
 
                                                     {
                                                         templateData.map(t => (
-                                                            <option key={t.Id} value={t.Id}>{t.Name}</option>
+                                                            <option key={t.Id} value={t.Message}>{t.Name}</option>
                                                         ))
                                                     }    
 

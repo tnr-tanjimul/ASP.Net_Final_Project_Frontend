@@ -178,7 +178,7 @@ const BulkSender = (props) => {
 
                                                     {
                                                         templateData.map(t => (
-                                                            <option key={t.Id} value={t.Id}>{t.Name}</option>
+                                                            <option key={t.Id} value={t.Message}>{t.Name}</option>
                                                         ))
                                                     }    
 
