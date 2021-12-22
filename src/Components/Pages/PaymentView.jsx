@@ -104,7 +104,7 @@ const PaymentView = (props) => {
                                                                     <td>
 
                                                                     {p.Status === "Pending" &&
-                                                                          <Link to={"/payment/make/" + p.Id + ""} className="action-icon">
+                                                                          <Link to={"/payment/make/" + p.Id + "/"+p.Amount+""} className="action-icon">
                                                                           <button type="button" className="btn btn-info btn-rounded waves-effect waves-light">Pay</button>
                                                                         </Link>
                                                                     }

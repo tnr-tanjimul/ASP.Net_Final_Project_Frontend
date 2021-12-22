@@ -1,5 +1,11 @@
 import { Link } from "react-router-dom";
 function SideMenu() {
+
+    var role = null;
+    if (localStorage.getItem('user')) {
+        var obj = JSON.parse(localStorage.getItem('user'));
+        role = obj.role;
+    }
     return (
         <div id="sidebar-menu" className="show">
 
@@ -130,6 +136,8 @@ function SideMenu() {
                 </li>
 
 
+
+                {role == "1" &&
                 <li>
                     <a href="#h_user" data-toggle="collapse">
                         <i className="mdi mdi-account-convert"></i>
@@ -145,6 +153,8 @@ function SideMenu() {
                     </div>
 
                 </li>
+                }   
+                
 
 
                 <li>

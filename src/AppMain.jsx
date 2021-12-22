@@ -34,6 +34,7 @@ import ApiKeyView from './Components/Pages/ApiKeysView';
 import ApiKeyCreate from './Components/Pages/ApiKeyCreate';
 import PlanCreate from './Components/Pages/PlanCreate';
 import ApiKeyGenerator from './Components/Pages/ApiKeyGenerator';
+import PayNow from './Components/Pages/PayNow';
 function AppMain() {
     return (
         <Router>
@@ -178,6 +179,10 @@ function AppMain() {
                         <PaymentView></PaymentView>
                     </Route>
 
+                    <Route exact path="/payment/make/:id/:amount">
+                        <PayNow></PayNow>
+                    </Route>
+
 
 
                     <Route exact path="/apikey">
@@ -195,6 +200,8 @@ function AppMain() {
                     <Route exact path="/apikey/delete/:id">
                         <ApiKeyRemove></ApiKeyRemove>
                     </Route>
+
+
 
                     <Route exact path="/login">
                         <AuthLogin></AuthLogin>
